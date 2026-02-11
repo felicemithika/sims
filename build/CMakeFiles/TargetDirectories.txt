@@ -1,0 +1,5 @@
+/media/ghostbyte/datadump/sims/build/CMakeFiles/SIMS.dir
+/media/ghostbyte/datadump/sims/build/CMakeFiles/edit_cache.dir
+/media/ghostbyte/datadump/sims/build/CMakeFiles/rebuild_cache.dir
+/media/ghostbyte/datadump/sims/build/CMakeFiles/SIMS_autogen_timestamp_deps.dir
+/media/ghostbyte/datadump/sims/build/CMakeFiles/SIMS_autogen.dir
