@@ -21,10 +21,10 @@
        <item>
         <widget class="QFrame" name="links_frame">
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::Shape::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Shadow::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout">
           <item row="0" column="3">
@@ -38,9 +38,9 @@
            </widget>
           </item>
           <item row="0" column="0">
-           <widget class="QPushButton" name="create_a_barcode_pushButton">
+           <widget class="QPushButton" name="go_into_surgery_pushButton">
             <property name="text">
-             <string>Create a Barcode</string>
+             <string>Go Into Surgery</string>
             </property>
             <property name="flat">
              <bool>true</bool>
@@ -73,19 +73,19 @@
        <item>
         <widget class="QScrollArea" name="scrollArea">
          <property name="frameShape">
-          <enum>QFrame::WinPanel</enum>
+          <enum>QFrame::Shape::WinPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Sunken</enum>
+          <enum>QFrame::Shadow::Sunken</enum>
          </property>
          <property name="sizeAdjustPolicy">
-          <enum>QAbstractScrollArea::AdjustIgnored</enum>
+          <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustIgnored</enum>
          </property>
          <property name="widgetResizable">
           <bool>true</bool>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignmentFlag::AlignCenter</set>
          </property>
          <widget class="QWidget" name="scrollAreaWidgetContents">
           <property name="geometry">
@@ -93,11 +93,11 @@
             <x>0</x>
             <y>0</y>
             <width>1268</width>
-            <height>464</height>
+            <height>460</height>
            </rect>
           </property>
           <property name="layoutDirection">
-           <enum>Qt::LeftToRight</enum>
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
           </property>
          </widget>
         </widget>
@@ -113,7 +113,7 @@
      <x>0</x>
      <y>0</y>
      <width>1304</width>
-     <height>21</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>

@@ -227,6 +227,30 @@ SIMS_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.s
 .PHONY : SIMS_autogen/mocs_compilation.cpp.s
 
+cpp/DBManager.o: cpp/DBManager.cpp.o
+.PHONY : cpp/DBManager.o
+
+# target to build an object file
+cpp/DBManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/DBManager.cpp.o
+.PHONY : cpp/DBManager.cpp.o
+
+cpp/DBManager.i: cpp/DBManager.cpp.i
+.PHONY : cpp/DBManager.i
+
+# target to preprocess a source file
+cpp/DBManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/DBManager.cpp.i
+.PHONY : cpp/DBManager.cpp.i
+
+cpp/DBManager.s: cpp/DBManager.cpp.s
+.PHONY : cpp/DBManager.s
+
+# target to generate assembly for a file
+cpp/DBManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/DBManager.cpp.s
+.PHONY : cpp/DBManager.cpp.s
+
 cpp/add_items_into_inventory.o: cpp/add_items_into_inventory.cpp.o
 .PHONY : cpp/add_items_into_inventory.o
 
@@ -395,6 +419,54 @@ cpp/main_window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/main_window.cpp.s
 .PHONY : cpp/main_window.cpp.s
 
+cpp/pick_a_set_widget.o: cpp/pick_a_set_widget.cpp.o
+.PHONY : cpp/pick_a_set_widget.o
+
+# target to build an object file
+cpp/pick_a_set_widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.o
+.PHONY : cpp/pick_a_set_widget.cpp.o
+
+cpp/pick_a_set_widget.i: cpp/pick_a_set_widget.cpp.i
+.PHONY : cpp/pick_a_set_widget.i
+
+# target to preprocess a source file
+cpp/pick_a_set_widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.i
+.PHONY : cpp/pick_a_set_widget.cpp.i
+
+cpp/pick_a_set_widget.s: cpp/pick_a_set_widget.cpp.s
+.PHONY : cpp/pick_a_set_widget.s
+
+# target to generate assembly for a file
+cpp/pick_a_set_widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.s
+.PHONY : cpp/pick_a_set_widget.cpp.s
+
+cpp/select_the_surgery.o: cpp/select_the_surgery.cpp.o
+.PHONY : cpp/select_the_surgery.o
+
+# target to build an object file
+cpp/select_the_surgery.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.o
+.PHONY : cpp/select_the_surgery.cpp.o
+
+cpp/select_the_surgery.i: cpp/select_the_surgery.cpp.i
+.PHONY : cpp/select_the_surgery.i
+
+# target to preprocess a source file
+cpp/select_the_surgery.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.i
+.PHONY : cpp/select_the_surgery.cpp.i
+
+cpp/select_the_surgery.s: cpp/select_the_surgery.cpp.s
+.PHONY : cpp/select_the_surgery.s
+
+# target to generate assembly for a file
+cpp/select_the_surgery.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.s
+.PHONY : cpp/select_the_surgery.cpp.s
+
 cpp/view_created_batches.o: cpp/view_created_batches.cpp.o
 .PHONY : cpp/view_created_batches.o
 
@@ -487,6 +559,9 @@ help:
 	@echo "... SIMS_autogen/mocs_compilation.o"
 	@echo "... SIMS_autogen/mocs_compilation.i"
 	@echo "... SIMS_autogen/mocs_compilation.s"
+	@echo "... cpp/DBManager.o"
+	@echo "... cpp/DBManager.i"
+	@echo "... cpp/DBManager.s"
 	@echo "... cpp/add_items_into_inventory.o"
 	@echo "... cpp/add_items_into_inventory.i"
 	@echo "... cpp/add_items_into_inventory.s"
@@ -508,6 +583,12 @@ help:
 	@echo "... cpp/main_window.o"
 	@echo "... cpp/main_window.i"
 	@echo "... cpp/main_window.s"
+	@echo "... cpp/pick_a_set_widget.o"
+	@echo "... cpp/pick_a_set_widget.i"
+	@echo "... cpp/pick_a_set_widget.s"
+	@echo "... cpp/select_the_surgery.o"
+	@echo "... cpp/select_the_surgery.i"
+	@echo "... cpp/select_the_surgery.s"
 	@echo "... cpp/view_created_batches.o"
 	@echo "... cpp/view_created_batches.i"
 	@echo "... cpp/view_created_batches.s"

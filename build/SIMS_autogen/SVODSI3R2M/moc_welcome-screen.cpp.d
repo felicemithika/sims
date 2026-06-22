@@ -330,6 +330,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qmargins.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetacontainer.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qminmax.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h \
@@ -425,6 +426,15 @@
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlDatabase \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlError \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlQuery \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqldatabase.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqlerror.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqlquery.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsql-config.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsqlexports.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsqlglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QProgressBar \

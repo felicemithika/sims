@@ -4,6 +4,8 @@ SIMS_autogen/timestamp: \
 	/media/ghostbyte/datadump/sims/build/CMakeFiles/3.31.6/CMakeSystem.cmake \
 	/media/ghostbyte/datadump/sims/build/SIMS_autogen/moc_predefs.h \
 	/media/ghostbyte/datadump/sims/build/ui_all.h \
+	/media/ghostbyte/datadump/sims/cpp/DBManager.cpp \
+	/media/ghostbyte/datadump/sims/cpp/DBManager.h \
 	/media/ghostbyte/datadump/sims/cpp/add_items_into_inventory.cpp \
 	/media/ghostbyte/datadump/sims/cpp/add_items_into_inventory.h \
 	/media/ghostbyte/datadump/sims/cpp/add_items_into_the_barcode.cpp \
@@ -17,6 +19,10 @@ SIMS_autogen/timestamp: \
 	/media/ghostbyte/datadump/sims/cpp/main.cpp \
 	/media/ghostbyte/datadump/sims/cpp/main_window.cpp \
 	/media/ghostbyte/datadump/sims/cpp/main_window.h \
+	/media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.cpp \
+	/media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.h \
+	/media/ghostbyte/datadump/sims/cpp/select_the_surgery.cpp \
+	/media/ghostbyte/datadump/sims/cpp/select_the_surgery.h \
 	/media/ghostbyte/datadump/sims/cpp/user_session.h \
 	/media/ghostbyte/datadump/sims/cpp/view_created_batches.cpp \
 	/media/ghostbyte/datadump/sims/cpp/view_created_batches.h \

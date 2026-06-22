@@ -1,0 +1,68 @@
+{
+   glib_mem_leak
+   Memcheck:Leak
+   match-leak-kinds: possible,indirect
+   fun:malloc
+   fun:g_malloc
+}
+
+{
+   glib_strdup_leak
+   Memcheck:Leak
+   match-leak-kinds: possible,indirect
+   fun:g_strdup
+}
+
+{
+   pango_font_leak
+   Memcheck:Leak
+   match-leak-kinds: possible,indirect
+   fun:malloc
+   fun:g_malloc
+   fun:g_strdup
+   fun:pango_font_description_copy
+}
+
+{
+   gtk_widget_pango_context
+   Memcheck:Leak
+   match-leak-kinds: possible,indirect
+   fun:gtk_widget_create_pango_context
+   fun:gtk_widget_get_pango_context
+   fun:gtk_widget_create_pango_layout
+}
+
+{
+   gtk_internal_objects
+   Memcheck:Leak
+   match-leak-kinds: possible,indirect
+   fun:g_type_create_instance
+}
+
+{
+   glib_gobject_cache
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:g_type_create_instance
+}
+
+{
+   generic_gtk_noise
+   Memcheck:Leak
+   match-leak-kinds: possible,indirect,reachable
+   obj:/usr/lib/*/libgtk-3.so*
+}
+
+{
+   generic_glib_noise
+   Memcheck:Leak
+   match-leak-kinds: possible,indirect,reachable
+   obj:/usr/lib/*/libglib-2.0.so*
+}
+
+{
+   generic_pango_noise
+   Memcheck:Leak
+   match-leak-kinds: possible,indirect,reachable
+   obj:/usr/lib/*/libpango-1.0.so*
+}

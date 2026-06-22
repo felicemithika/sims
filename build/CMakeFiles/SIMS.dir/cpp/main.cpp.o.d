@@ -389,6 +389,17 @@ CMakeFiles/SIMS.dir/cpp/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlDatabase \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqldatabase.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsqlglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsql-config.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsqlexports.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlQuery \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqlquery.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqldatabase.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlError \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqlerror.h \
  /media/ghostbyte/datadump/sims/cpp/../build/ui_welcome-screen.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
@@ -417,23 +428,12 @@ CMakeFiles/SIMS.dir/cpp/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qprogressbar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /media/ghostbyte/datadump/sims/cpp/login_screen.h \
- /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlDatabase \
- /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqldatabase.h \
- /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsqlglobal.h \
- /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsql-config.h \
- /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsqlexports.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
- /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlQuery \
- /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqlquery.h \
- /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqldatabase.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMessageBox \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmessagebox.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialog.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialogbuttonbox.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h \
- /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlError \
- /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqlerror.h \
  /media/ghostbyte/datadump/sims/cpp/../build/ui_login-screen.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFormLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qformlayout.h \
@@ -524,22 +524,27 @@ CMakeFiles/SIMS.dir/cpp/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontdatabase.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpinBox \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qspinbox.h \
+ /media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.h \
+ /media/ghostbyte/datadump/sims/cpp/../build/ui_pick_a_set_widget.h \
+ /media/ghostbyte/datadump/sims/cpp/DBManager.h \
+ /media/ghostbyte/datadump/sims/cpp/user_session.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QStandardItemModel \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qstandarditemmodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QStandardItemModel \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qstandarditemmodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h \
  /media/ghostbyte/datadump/sims/cpp/add_items_into_inventory.h \
  /media/ghostbyte/datadump/sims/cpp/../build/ui_add_items_in_the_inventory.h \
- /media/ghostbyte/datadump/sims/cpp/user_session.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDate \
  /media/ghostbyte/datadump/sims/cpp/view_created_batches.h \
  /media/ghostbyte/datadump/sims/cpp/../build/ui_view_all_created_batches.h \
  /media/ghostbyte/datadump/sims/cpp/view_the_inventory.h \
  /media/ghostbyte/datadump/sims/cpp/../build/ui_the_current_inventory.h \
+ /media/ghostbyte/datadump/sims/cpp/select_the_surgery.h \
+ /media/ghostbyte/datadump/sims/cpp/../build/ui_select_the_surgery_widget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication

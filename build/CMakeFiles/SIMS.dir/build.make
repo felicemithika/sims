@@ -99,19 +99,29 @@ ui_main_window.h: /usr/lib/qt6/libexec/uic
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating ui_main_window.h"
 	/usr/lib/qt6/libexec/uic -o /media/ghostbyte/datadump/sims/build/ui_main_window.h /media/ghostbyte/datadump/sims/ui_files/main_window.ui
 
+ui_pick_a_set_widget.h: /media/ghostbyte/datadump/sims/ui_files/pick_a_set_widget.ui
+ui_pick_a_set_widget.h: /usr/lib/qt6/libexec/uic
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ui_pick_a_set_widget.h"
+	/usr/lib/qt6/libexec/uic -o /media/ghostbyte/datadump/sims/build/ui_pick_a_set_widget.h /media/ghostbyte/datadump/sims/ui_files/pick_a_set_widget.ui
+
+ui_select_the_surgery_widget.h: /media/ghostbyte/datadump/sims/ui_files/select_the_surgery_widget.ui
+ui_select_the_surgery_widget.h: /usr/lib/qt6/libexec/uic
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating ui_select_the_surgery_widget.h"
+	/usr/lib/qt6/libexec/uic -o /media/ghostbyte/datadump/sims/build/ui_select_the_surgery_widget.h /media/ghostbyte/datadump/sims/ui_files/select_the_surgery_widget.ui
+
 ui_the_current_inventory.h: /media/ghostbyte/datadump/sims/ui_files/the_current_inventory.ui
 ui_the_current_inventory.h: /usr/lib/qt6/libexec/uic
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating ui_the_current_inventory.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating ui_the_current_inventory.h"
 	/usr/lib/qt6/libexec/uic -o /media/ghostbyte/datadump/sims/build/ui_the_current_inventory.h /media/ghostbyte/datadump/sims/ui_files/the_current_inventory.ui
 
 ui_view_all_created_batches.h: /media/ghostbyte/datadump/sims/ui_files/view_all_created_batches.ui
 ui_view_all_created_batches.h: /usr/lib/qt6/libexec/uic
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating ui_view_all_created_batches.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating ui_view_all_created_batches.h"
 	/usr/lib/qt6/libexec/uic -o /media/ghostbyte/datadump/sims/build/ui_view_all_created_batches.h /media/ghostbyte/datadump/sims/ui_files/view_all_created_batches.ui
 
 ui_welcome-screen.h: /media/ghostbyte/datadump/sims/ui_files/welcome-screen.ui
 ui_welcome-screen.h: /usr/lib/qt6/libexec/uic
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating ui_welcome-screen.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Generating ui_welcome-screen.h"
 	/usr/lib/qt6/libexec/uic -o /media/ghostbyte/datadump/sims/build/ui_welcome-screen.h /media/ghostbyte/datadump/sims/ui_files/welcome-screen.ui
 
 SIMS_autogen/3YJK5W5UP7/qrc_login.cpp: /media/ghostbyte/datadump/sims/resources/login.qrc
@@ -119,7 +129,7 @@ SIMS_autogen/3YJK5W5UP7/qrc_login.cpp: CMakeFiles/SIMS_autogen.dir/AutoRcc_login
 SIMS_autogen/3YJK5W5UP7/qrc_login.cpp: /media/ghostbyte/datadump/sims/resources/images/surgery-1822458_640.jpg
 SIMS_autogen/3YJK5W5UP7/qrc_login.cpp: /usr/lib/qt6/libexec/rcc
 SIMS_autogen/3YJK5W5UP7/qrc_login.cpp: /usr/lib/qt6/libexec/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Automatic RCC for resources/login.qrc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Automatic RCC for resources/login.qrc"
 	/usr/bin/cmake -E cmake_autorcc /media/ghostbyte/datadump/sims/build/CMakeFiles/SIMS_autogen.dir/AutoRcc_login_3YJK5W5UP7_Info.json 
 
 SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp: /media/ghostbyte/datadump/sims/resources/welcome_screen.qrc
@@ -129,7 +139,7 @@ SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp: /media/ghostbyte/datadump/sims/r
 SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp: /media/ghostbyte/datadump/sims/resources/images/Aga-Khan-Logo-Crop.png
 SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp: /usr/lib/qt6/libexec/rcc
 SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp: /usr/lib/qt6/libexec/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Automatic RCC for resources/welcome_screen.qrc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Automatic RCC for resources/welcome_screen.qrc"
 	/usr/bin/cmake -E cmake_autorcc /media/ghostbyte/datadump/sims/build/CMakeFiles/SIMS_autogen.dir/AutoRcc_welcome_screen_3YJK5W5UP7_Info.json 
 
 CMakeFiles/SIMS.dir/codegen:
@@ -138,7 +148,7 @@ CMakeFiles/SIMS.dir/codegen:
 CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o: CMakeFiles/SIMS.dir/flags.make
 CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o: SIMS_autogen/mocs_compilation.cpp
 CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o -MF CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o -c /media/ghostbyte/datadump/sims/build/SIMS_autogen/mocs_compilation.cpp
 
 CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.i: cmake_force
@@ -149,10 +159,24 @@ CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/ghostbyte/datadump/sims/build/SIMS_autogen/mocs_compilation.cpp -o CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.s
 
+CMakeFiles/SIMS.dir/cpp/DBManager.cpp.o: CMakeFiles/SIMS.dir/flags.make
+CMakeFiles/SIMS.dir/cpp/DBManager.cpp.o: /media/ghostbyte/datadump/sims/cpp/DBManager.cpp
+CMakeFiles/SIMS.dir/cpp/DBManager.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SIMS.dir/cpp/DBManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/cpp/DBManager.cpp.o -MF CMakeFiles/SIMS.dir/cpp/DBManager.cpp.o.d -o CMakeFiles/SIMS.dir/cpp/DBManager.cpp.o -c /media/ghostbyte/datadump/sims/cpp/DBManager.cpp
+
+CMakeFiles/SIMS.dir/cpp/DBManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SIMS.dir/cpp/DBManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/ghostbyte/datadump/sims/cpp/DBManager.cpp > CMakeFiles/SIMS.dir/cpp/DBManager.cpp.i
+
+CMakeFiles/SIMS.dir/cpp/DBManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIMS.dir/cpp/DBManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/ghostbyte/datadump/sims/cpp/DBManager.cpp -o CMakeFiles/SIMS.dir/cpp/DBManager.cpp.s
+
 CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.o: CMakeFiles/SIMS.dir/flags.make
 CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.o: /media/ghostbyte/datadump/sims/cpp/add_items_into_inventory.cpp
 CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.o -MF CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.o.d -o CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.o -c /media/ghostbyte/datadump/sims/cpp/add_items_into_inventory.cpp
 
 CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.i: cmake_force
@@ -166,7 +190,7 @@ CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.s: cmake_force
 CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o: CMakeFiles/SIMS.dir/flags.make
 CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o: /media/ghostbyte/datadump/sims/cpp/add_items_into_the_barcode.cpp
 CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o -MF CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o.d -o CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o -c /media/ghostbyte/datadump/sims/cpp/add_items_into_the_barcode.cpp
 
 CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.i: cmake_force
@@ -180,7 +204,7 @@ CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.s: cmake_force
 CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.o: CMakeFiles/SIMS.dir/flags.make
 CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.o: /media/ghostbyte/datadump/sims/cpp/control_my_stack.cpp
 CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.o -MF CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.o.d -o CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.o -c /media/ghostbyte/datadump/sims/cpp/control_my_stack.cpp
 
 CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.i: cmake_force
@@ -194,7 +218,7 @@ CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.s: cmake_force
 CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o: CMakeFiles/SIMS.dir/flags.make
 CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o: /media/ghostbyte/datadump/sims/cpp/create_a_barcode.cpp
 CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o -MF CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o.d -o CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o -c /media/ghostbyte/datadump/sims/cpp/create_a_barcode.cpp
 
 CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.i: cmake_force
@@ -208,7 +232,7 @@ CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.s: cmake_force
 CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o: CMakeFiles/SIMS.dir/flags.make
 CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o: /media/ghostbyte/datadump/sims/cpp/login_screen.cpp
 CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o -MF CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o.d -o CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o -c /media/ghostbyte/datadump/sims/cpp/login_screen.cpp
 
 CMakeFiles/SIMS.dir/cpp/login_screen.cpp.i: cmake_force
@@ -222,7 +246,7 @@ CMakeFiles/SIMS.dir/cpp/login_screen.cpp.s: cmake_force
 CMakeFiles/SIMS.dir/cpp/main.cpp.o: CMakeFiles/SIMS.dir/flags.make
 CMakeFiles/SIMS.dir/cpp/main.cpp.o: /media/ghostbyte/datadump/sims/cpp/main.cpp
 CMakeFiles/SIMS.dir/cpp/main.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/SIMS.dir/cpp/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/SIMS.dir/cpp/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/cpp/main.cpp.o -MF CMakeFiles/SIMS.dir/cpp/main.cpp.o.d -o CMakeFiles/SIMS.dir/cpp/main.cpp.o -c /media/ghostbyte/datadump/sims/cpp/main.cpp
 
 CMakeFiles/SIMS.dir/cpp/main.cpp.i: cmake_force
@@ -236,7 +260,7 @@ CMakeFiles/SIMS.dir/cpp/main.cpp.s: cmake_force
 CMakeFiles/SIMS.dir/cpp/main_window.cpp.o: CMakeFiles/SIMS.dir/flags.make
 CMakeFiles/SIMS.dir/cpp/main_window.cpp.o: /media/ghostbyte/datadump/sims/cpp/main_window.cpp
 CMakeFiles/SIMS.dir/cpp/main_window.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/SIMS.dir/cpp/main_window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/SIMS.dir/cpp/main_window.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/cpp/main_window.cpp.o -MF CMakeFiles/SIMS.dir/cpp/main_window.cpp.o.d -o CMakeFiles/SIMS.dir/cpp/main_window.cpp.o -c /media/ghostbyte/datadump/sims/cpp/main_window.cpp
 
 CMakeFiles/SIMS.dir/cpp/main_window.cpp.i: cmake_force
@@ -247,10 +271,38 @@ CMakeFiles/SIMS.dir/cpp/main_window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIMS.dir/cpp/main_window.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/ghostbyte/datadump/sims/cpp/main_window.cpp -o CMakeFiles/SIMS.dir/cpp/main_window.cpp.s
 
+CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.o: CMakeFiles/SIMS.dir/flags.make
+CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.o: /media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.cpp
+CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.o -MF CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.o.d -o CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.o -c /media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.cpp
+
+CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.cpp > CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.i
+
+CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.cpp -o CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.s
+
+CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.o: CMakeFiles/SIMS.dir/flags.make
+CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.o: /media/ghostbyte/datadump/sims/cpp/select_the_surgery.cpp
+CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.o -MF CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.o.d -o CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.o -c /media/ghostbyte/datadump/sims/cpp/select_the_surgery.cpp
+
+CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/ghostbyte/datadump/sims/cpp/select_the_surgery.cpp > CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.i
+
+CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/ghostbyte/datadump/sims/cpp/select_the_surgery.cpp -o CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.s
+
 CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.o: CMakeFiles/SIMS.dir/flags.make
 CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.o: /media/ghostbyte/datadump/sims/cpp/view_created_batches.cpp
 CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.o -MF CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.o.d -o CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.o -c /media/ghostbyte/datadump/sims/cpp/view_created_batches.cpp
 
 CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.i: cmake_force
@@ -264,7 +316,7 @@ CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.s: cmake_force
 CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.o: CMakeFiles/SIMS.dir/flags.make
 CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.o: /media/ghostbyte/datadump/sims/cpp/view_the_inventory.cpp
 CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.o -MF CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.o.d -o CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.o -c /media/ghostbyte/datadump/sims/cpp/view_the_inventory.cpp
 
 CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.i: cmake_force
@@ -278,7 +330,7 @@ CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.s: cmake_force
 CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.o: CMakeFiles/SIMS.dir/flags.make
 CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.o: /media/ghostbyte/datadump/sims/cpp/welcome-screen.cpp
 CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.o -MF CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.o.d -o CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.o -c /media/ghostbyte/datadump/sims/cpp/welcome-screen.cpp
 
 CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.i: cmake_force
@@ -292,7 +344,7 @@ CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.s: cmake_force
 CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.o: CMakeFiles/SIMS.dir/flags.make
 CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.o: SIMS_autogen/3YJK5W5UP7/qrc_login.cpp
 CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.o -MF CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.o.d -o CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.o -c /media/ghostbyte/datadump/sims/build/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp
 
 CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.i: cmake_force
@@ -306,7 +358,7 @@ CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.s: cmake_force
 CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o: CMakeFiles/SIMS.dir/flags.make
 CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o: SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp
 CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o: CMakeFiles/SIMS.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o -MF CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o.d -o CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o -c /media/ghostbyte/datadump/sims/build/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp
 
 CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.i: cmake_force
@@ -320,6 +372,7 @@ CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.s: cmake_forc
 # Object files for target SIMS
 SIMS_OBJECTS = \
 "CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o" \
+"CMakeFiles/SIMS.dir/cpp/DBManager.cpp.o" \
 "CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.o" \
 "CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o" \
 "CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.o" \
@@ -327,6 +380,8 @@ SIMS_OBJECTS = \
 "CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o" \
 "CMakeFiles/SIMS.dir/cpp/main.cpp.o" \
 "CMakeFiles/SIMS.dir/cpp/main_window.cpp.o" \
+"CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.o" \
+"CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.o" \
 "CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.o" \
 "CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.o" \
 "CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.o" \
@@ -337,6 +392,7 @@ SIMS_OBJECTS = \
 SIMS_EXTERNAL_OBJECTS =
 
 SIMS: CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o
+SIMS: CMakeFiles/SIMS.dir/cpp/DBManager.cpp.o
 SIMS: CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.o
 SIMS: CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o
 SIMS: CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.o
@@ -344,6 +400,8 @@ SIMS: CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o
 SIMS: CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o
 SIMS: CMakeFiles/SIMS.dir/cpp/main.cpp.o
 SIMS: CMakeFiles/SIMS.dir/cpp/main_window.cpp.o
+SIMS: CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.o
+SIMS: CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.o
 SIMS: CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.o
 SIMS: CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.o
 SIMS: CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.o
@@ -358,7 +416,7 @@ SIMS: /usr/lib/x86_64-linux-gnu/libGLX.so
 SIMS: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 SIMS: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.8.2
 SIMS: CMakeFiles/SIMS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable SIMS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/media/ghostbyte/datadump/sims/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable SIMS"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SIMS.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -E copy /media/ghostbyte/datadump/sims/python/barcode_generator.py /media/ghostbyte/datadump/sims/build/python/barcode_generator.py
 
@@ -378,6 +436,8 @@ CMakeFiles/SIMS.dir/depend: ui_create_a_barcode.h
 CMakeFiles/SIMS.dir/depend: ui_items_inside_a_batch.h
 CMakeFiles/SIMS.dir/depend: ui_login-screen.h
 CMakeFiles/SIMS.dir/depend: ui_main_window.h
+CMakeFiles/SIMS.dir/depend: ui_pick_a_set_widget.h
+CMakeFiles/SIMS.dir/depend: ui_select_the_surgery_widget.h
 CMakeFiles/SIMS.dir/depend: ui_the_current_inventory.h
 CMakeFiles/SIMS.dir/depend: ui_view_all_created_batches.h
 CMakeFiles/SIMS.dir/depend: ui_welcome-screen.h

@@ -3,6 +3,7 @@ SIMS: \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o \
   CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o \
+  CMakeFiles/SIMS.dir/cpp/DBManager.cpp.o \
   CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.o \
   CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o \
   CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.o \
@@ -10,6 +11,8 @@ SIMS: \
   CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o \
   CMakeFiles/SIMS.dir/cpp/main.cpp.o \
   CMakeFiles/SIMS.dir/cpp/main_window.cpp.o \
+  CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.o \
+  CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.o \
   CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.o \
   CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.o \
   CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.o \
@@ -93,6 +96,8 @@ SIMS: \
 
 CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o:
 
+CMakeFiles/SIMS.dir/cpp/DBManager.cpp.o:
+
 CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.o:
 
 CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o:
@@ -106,6 +111,10 @@ CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o:
 CMakeFiles/SIMS.dir/cpp/main.cpp.o:
 
 CMakeFiles/SIMS.dir/cpp/main_window.cpp.o:
+
+CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.o:
+
+CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.o:
 
 CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.o:
 

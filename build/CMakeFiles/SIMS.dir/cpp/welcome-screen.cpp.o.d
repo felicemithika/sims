@@ -390,6 +390,17 @@ CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlDatabase \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqldatabase.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsqlglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsql-config.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsqlexports.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlQuery \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqlquery.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqldatabase.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlError \
+ /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqlerror.h \
  /media/ghostbyte/datadump/sims/cpp/../build/ui_welcome-screen.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \

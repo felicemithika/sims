@@ -513,12 +513,15 @@ CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtableview.h \
  /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/../../../cpp/create_a_barcode.h \
  /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/../../../cpp/add_items_into_the_barcode.h \
+ /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/../../../cpp/pick_a_set_widget.h \
+ /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/../../../cpp/../build/ui_pick_a_set_widget.h \
+ /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/../../../cpp/DBManager.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QStandardItemModel \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qstandarditemmodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QStandardItemModel \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qstandarditemmodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h \
  /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/moc_control_my_stack.cpp \
@@ -548,7 +551,13 @@ CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o: \
  /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/../../../cpp/../build/ui_view_all_created_batches.h \
  /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/../../../cpp/view_the_inventory.h \
  /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/../../../cpp/../build/ui_the_current_inventory.h \
+ /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/../../../cpp/select_the_surgery.h \
+ /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/../../../cpp/../build/ui_select_the_surgery_widget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
+ /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/moc_pick_a_set_widget.cpp \
+ /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/../../../cpp/pick_a_set_widget.h \
+ /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/moc_select_the_surgery.cpp \
+ /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/../../../cpp/select_the_surgery.h \
  /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/moc_view_created_batches.cpp \
  /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/../../../cpp/view_created_batches.h \
  /media/ghostbyte/datadump/sims/build/SIMS_autogen/SVODSI3R2M/moc_view_the_inventory.cpp \

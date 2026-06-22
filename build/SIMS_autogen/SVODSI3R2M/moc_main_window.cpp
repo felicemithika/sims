@@ -39,7 +39,7 @@ struct qt_meta_tag_ZN10MainWindowE_t {};
 #ifdef QT_MOC_HAS_STRINGDATA
 static constexpr auto qt_meta_stringdata_ZN10MainWindowE = QtMocHelpers::stringData(
     "MainWindow",
-    "on_create_a_barcode_pushButton_clicked",
+    "on_go_into_surgery_pushButton_clicked",
     "",
     "on_add_items_into_inventory_pushButton_clicked",
     "on_view_created_batches_pushButton_clicked",
@@ -86,7 +86,7 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_tag_ZN10MainWindowE_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
-        // method 'on_create_a_barcode_pushButton_clicked'
+        // method 'on_go_into_surgery_pushButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_add_items_into_inventory_pushButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -103,7 +103,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     auto *_t = static_cast<MainWindow *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->on_create_a_barcode_pushButton_clicked(); break;
+        case 0: _t->on_go_into_surgery_pushButton_clicked(); break;
         case 1: _t->on_add_items_into_inventory_pushButton_clicked(); break;
         case 2: _t->on_view_created_batches_pushButton_clicked(); break;
         case 3: _t->on_check_items_in_the_inventory_pushButton_clicked(); break;

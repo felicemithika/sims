@@ -1,13 +1,18 @@
 /****************************************************************************
 ** Resource object code
 **
-** Created by: The Resource Compiler for Qt version 6.4.2
+** Created by: The Resource Compiler for Qt version 6.8.2
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#ifdef _MSC_VER
+// disable informational message "function ... selected for automatic inline expansion"
+#pragma warning (disable: 4711)
+#endif
+
 static const unsigned char qt_resource_data[] = {
-  // /media/ghostbyte/datadump/sims/resources/images/surgery-1822458_640.jpg
+  // surgery-1822458_640.jpg
   0x0,0x1,0x7a,0x8b,
   0xff,
   0xd8,0xff,0xe0,0x0,0x10,0x4a,0x46,0x49,0x46,0x0,0x1,0x1,0x0,0x0,0x1,0x0,
@@ -6118,7 +6123,9 @@ static const unsigned char qt_resource_struct[] = {
 #   define QT_RCC_MANGLE_NAMESPACE(name) name
 #endif
 
-#ifdef QT_NAMESPACE
+#if defined(QT_INLINE_NAMESPACE)
+inline namespace QT_NAMESPACE {
+#elif defined(QT_NAMESPACE)
 namespace QT_NAMESPACE {
 #endif
 
@@ -6147,9 +6154,18 @@ int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_login)()
     return 1;
 }
 
+#ifdef __clang__
+#   pragma clang diagnostic push
+#   pragma clang diagnostic ignored "-Wexit-time-destructors"
+#endif
+
 namespace {
    struct initializer {
        initializer() { QT_RCC_MANGLE_NAMESPACE(qInitResources_login)(); }
        ~initializer() { QT_RCC_MANGLE_NAMESPACE(qCleanupResources_login)(); }
    } dummy;
 }
+
+#ifdef __clang__
+#   pragma clang diagnostic pop
+#endif

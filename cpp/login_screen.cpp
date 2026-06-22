@@ -1,6 +1,7 @@
 #include "login_screen.h"
 #include "user_session.h"
 #include "main_window.h"
+#include "DBManager.h"
 
 loginScreen::loginScreen(QWidget* parent) : QWidget(parent) {
     this->setObjectName("login_screen");
@@ -24,39 +25,9 @@ loginScreen::loginScreen(QWidget* parent) : QWidget(parent) {
     connect(ui.password, &QLineEdit::returnPressed, [this]() {
         ui.login_Button->setFocus();
     });
-
-    //connect to database
-    if (!connectToDatabase()) {
-        QMessageBox::critical(this, "Database Error", 
-                        "Cannot connect to database. Please check database configuration.");
-    }
 }
 
 loginScreen::~loginScreen() {
-    closeDatabase();
-}
-
-bool loginScreen::connectToDatabase() {
-    db = QSqlDatabase::addDatabase("QMARIADB", "login_connection");
-    db.setHostName("localhost");
-    db.setDatabaseName("sims_db");
-    db.setUserName("root");
-    db.setPassword("");
-
-    if (!db.open()) {
-        qDebug() << "Database error:" <<db.lastError().text();
-        return false;
-    }
-    qDebug() << "Database connected successfully";
-    return true;
-}
-
-void loginScreen::closeDatabase() {
-    if (db.isOpen()) {
-        db.close();
-        qDebug() << "Database connection closed";
-    }
-    QSqlDatabase::removeDatabase("login_connection");
 }
 
 void loginScreen::pressing_loginButton(){
@@ -70,15 +41,7 @@ void loginScreen::pressing_loginButton(){
         return;
     }
 
-    //check database connection
-    if (!db.isOpen()) {
-        if (!connectToDatabase()) {
-            QMessageBox::critical(this, "Database Error",
-                    "Cannot connect to database. Please try again.");
-            return;
-        }
-    }
-    QSqlQuery query(db);
+    QSqlQuery query(database_manager::instance().get_database());
     query.prepare("SELECT * FROM sims_logins WHERE username = :username AND password = :password");
     query.bindValue(":username", username);
     query.bindValue(":password", password);
@@ -93,7 +56,6 @@ void loginScreen::pressing_loginButton(){
         emit loginSuccessful();
         this->close();
 
-        closeDatabase();
 
     } else {
         QMessageBox::warning(this, "Login Failed!!", "Check your username and password and try again.");

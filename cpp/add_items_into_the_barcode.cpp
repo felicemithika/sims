@@ -34,6 +34,10 @@ add_items_Form::add_items_Form(const QString &batch_code, QSqlDatabase* parentdb
     add_items_into_surgical_instrument_combobox(ui.category_comboBox->currentText());
 
     ui.instrument_count_spinBox->setValue(1);
+    if (this->close()) {
+        
+    }
+
 }
 
 //feed the surgical instrument combox with items
@@ -154,5 +158,6 @@ void add_items_Form::on_add_instrument_pushButton_clicked() {
 
 //close the widget
 void add_items_Form::on_exit_pushButton_clicked() {
+
     this->close();
 }

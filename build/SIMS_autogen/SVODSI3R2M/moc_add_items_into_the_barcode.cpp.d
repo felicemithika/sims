@@ -2,8 +2,12 @@
   /media/ghostbyte/datadump/sims/build/SIMS_autogen/moc_predefs.h \
   /media/ghostbyte/datadump/sims/build/ui_add_items_into_the_barcode.h \
   /media/ghostbyte/datadump/sims/build/ui_create_a_barcode.h \
+  /media/ghostbyte/datadump/sims/build/ui_pick_a_set_widget.h \
+  /media/ghostbyte/datadump/sims/cpp/DBManager.h \
   /media/ghostbyte/datadump/sims/cpp/add_items_into_the_barcode.h \
   /media/ghostbyte/datadump/sims/cpp/create_a_barcode.h \
+  /media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.h \
+  /media/ghostbyte/datadump/sims/cpp/user_session.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -272,6 +276,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h \
@@ -474,10 +479,12 @@
   /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsqlglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QComboBox \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFormLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGridLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHeaderView \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMessageBox \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPlainTextEdit \
@@ -497,6 +504,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcombobox.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialog.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialogbuttonbox.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qformlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qheaderview.h \

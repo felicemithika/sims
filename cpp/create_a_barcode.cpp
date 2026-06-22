@@ -1,11 +1,13 @@
-#include "create_a_barcode.h"
+ #include "create_a_barcode.h"
 #include "login_screen.h"
 #include "user_session.h"
+#include "DBManager.h"
 #include <QVBoxLayout>
 #include <QStringBuilder>
 #include <QDir>
 #include <QPixmap>
 #include <QLabel>
+
 
 /*
 ##################################################################################
@@ -19,11 +21,7 @@ create_a_barcode_widget::create_a_barcode_widget(QWidget *parent) : QWidget(pare
     ui.setupUi(this);
 
     //connect to the database.
-    db = QSqlDatabase::addDatabase("QMARIADB", "login_connection");
-    db.setHostName("localhost");
-    db.setDatabaseName("sims_db");
-    db.setUserName("root");
-    db.setPassword("");
+    db = database_manager::instance().get_database();
 
     python_process = nullptr;
 
@@ -36,35 +34,14 @@ create_a_barcode_widget::create_a_barcode_widget(QWidget *parent) : QWidget(pare
 
     //fetch the logged in user from user_session.h
     QString username = UserSession::getInstance().getCurrentUser();
-    ui.issued_by_lineEdit->setText(username);
+    ui.created_by_lineEdit->setText(username);
 
     //populate the table with items that are going into the surgery.
     setUp_selected_items_tableView();
 
     //move the focus to the next input field or button when you press enter
-    ui.issued_to_lineEdit->setFocus();
-    connect(ui.issued_to_lineEdit, &QLineEdit::returnPressed, [this]() {
-        ui.type_of_surgery_lineEdit->setFocus();
-    });
+    ui.type_of_surgery_lineEdit->setFocus();
     connect(ui.type_of_surgery_lineEdit, &QLineEdit::returnPressed, [this]() {
-        ui.patient_name_lineEdit->setFocus();
-    });
-    connect(ui.patient_name_lineEdit, &QLineEdit::returnPressed, [this]() {
-        ui.patient_phone_no_lineEdit->setFocus();
-    });
-    connect(ui.patient_phone_no_lineEdit, &QLineEdit::returnPressed, [this]() {
-        ui.patient_other_phone_no_lineEdit->setFocus();
-    });
-    connect(ui.patient_other_phone_no_lineEdit, &QLineEdit::returnPressed, [this]() {
-        ui.next_of_kins_name_lineEdit->setFocus();
-    });
-    connect(ui.next_of_kins_name_lineEdit, &QLineEdit::returnPressed, [this]() {
-        ui.next_of_kins_phone_no_lineEdit->setFocus();
-    });
-    connect(ui.next_of_kins_phone_no_lineEdit, &QLineEdit::returnPressed, [this]() {
-        ui.next_of_kins_other_phone_no_lineEdit->setFocus();
-    });
-    connect(ui.next_of_kins_other_phone_no_lineEdit, &QLineEdit::returnPressed, [this]() {
         ui.plus_pushButton->setFocus();
     });
     connect(ui.plus_pushButton, &QPushButton::clicked, [this]() {
@@ -161,8 +138,8 @@ void create_a_barcode_widget::autoFillDateTime()
     formatted += QString("%1").arg(ms / 10, 2, 10, QChar('0'));
 
     ui.batch_code_lineEdit->setText(formatted);
-    ui.date_picked_lineEdit->setText(date.toString());
-    ui.time_picked_lineEdit->setText(time.toString());
+    ui.date_created_lineEdit->setText(date.toString());
+    ui.time_created_lineEdit->setText(time.toString());
 }
 
 //open add_items_into_barcode.h widget
@@ -176,6 +153,9 @@ void create_a_barcode_widget::on_plus_pushButton_clicked()
     QString batch_code = ui.batch_code_lineEdit->text().trimmed();
     add_items_Form *itemsinbarcode = new add_items_Form(batch_code, &db);
     
+    //Delete this widget once it closes
+    itemsinbarcode->setAttribute(Qt::WA_DeleteOnClose);
+
     /*connect the signal in add_items_into_barcode.h so signal items have been added.
     then setUp_selected_items_tableView will update the table with this data*/
     connect(itemsinbarcode, &add_items_Form::items_added, 
@@ -190,59 +170,20 @@ void create_a_barcode_widget::on_create_barcode_pushButton_clicked()
     QStringList missing_fields;
 
     QString batch_code = ui.batch_code_lineEdit->text().trimmed();
-    QString issued_by = ui.issued_by_lineEdit->text();
-    QString issued_to = ui.issued_to_lineEdit->text();
-    QString date_picked = ui.date_picked_lineEdit->text();
-    QString time_picked = ui.time_picked_lineEdit->text();
     QString type_of_surgery = ui.type_of_surgery_lineEdit->text();
-    QString patients_name = ui.patient_name_lineEdit->text();
-    QString patients_phone_no = ui.patient_phone_no_lineEdit->text().trimmed();
-    QString patients_other_phone_no = ui.patient_other_phone_no_lineEdit->text().trimmed();
-    QString next_of_kins_name = ui.next_of_kins_name_lineEdit->text();
-    QString next_of_kins_phone_no = ui.next_of_kins_phone_no_lineEdit->text().trimmed();
-    QString next_of_kins_other_phone_no = ui.next_of_kins_other_phone_no_lineEdit->text().trimmed();
+    QString created_by = ui.created_by_lineEdit->text();
+    QString date_created = ui.date_created_lineEdit->text();
+    QString time_created = ui.time_created_lineEdit->text();
     QStandardItemModel* model = qobject_cast<QStandardItemModel*>(ui.selected_items_tableView->model());
 
     //check if the fields are empty
-    if (issued_to.isEmpty())
-    {
-        missing_fields << "Issued To";
-        ui.issued_to_lineEdit->setPlaceholderText(" * Required *");
-        ui.issued_to_lineEdit->setStyleSheet("border: 1px solid red;");
-    }
     if (type_of_surgery.isEmpty())
     {
-        missing_fields << "Type of surgery";
+        missing_fields << "Issued To";
         ui.type_of_surgery_lineEdit->setPlaceholderText(" * Required *");
         ui.type_of_surgery_lineEdit->setStyleSheet("border: 1px solid red;");
     }
-    if (patients_name.isEmpty())
-    {
-        missing_fields << "Patient's name";
-        ui.patient_name_lineEdit->setPlaceholderText(" * Required *");
-        ui.patient_name_lineEdit->setStyleSheet("border: 1px solid red;");
-    }
-    if (patients_phone_no.isEmpty())
-    {
-        missing_fields << "Patient's phone no";
-        ui.patient_phone_no_lineEdit->setPlaceholderText(" * Required *");
-        ui.patient_phone_no_lineEdit->setStyleSheet("border: 1px solid red;");
-    }
-    if (next_of_kins_name.isEmpty())
-    {
-        missing_fields << "Next of kin name";
-        ui.next_of_kins_name_lineEdit->setPlaceholderText(" * Required *");
-        ui.next_of_kins_name_lineEdit->setStyleSheet("border: 1px solid red;");
-    }
-    if (next_of_kins_phone_no.isEmpty())
-    {
-        missing_fields << "Next of kin phone no";
-        ui.next_of_kins_phone_no_lineEdit->setPlaceholderText(" * Required *");
-        ui.next_of_kins_phone_no_lineEdit->setStyleSheet("border: 1px solid red;");
-    }
-
-
-
+    
     //display an error message box if there are empty fields that should be field
     if (!missing_fields.isEmpty())
     {
@@ -276,19 +217,12 @@ void create_a_barcode_widget::on_create_barcode_pushButton_clicked()
 
         QSqlQuery query(db);
 
-        query.prepare("INSERT INTO created_batches (batch_code, issued_by, issued_to, date_picked, time_picked, type_of_surgery, patients_name, patients_phone_number, patients_other_phone_no, next_of_kins_name, next_of_kins_phone_number, next_of_kins_other_phone_no) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        query.prepare("INSERT INTO created_batches (batch_code, type_of_surgery, created_by, date_created, time_created ) VALUES (?, ?, ?, ?, ?)");
         query.addBindValue(batch_code);
-        query.addBindValue(issued_by);
-        query.addBindValue(issued_to);
-        query.addBindValue(date_picked);
-        query.addBindValue(time_picked);
         query.addBindValue(type_of_surgery);
-        query.addBindValue(patients_name);
-        query.addBindValue(patients_phone_no);
-        query.addBindValue(patients_other_phone_no);
-        query.addBindValue(next_of_kins_name);
-        query.addBindValue(next_of_kins_phone_no);
-        query.addBindValue(next_of_kins_other_phone_no);
+        query.addBindValue(created_by);
+        query.addBindValue(date_created);
+        query.addBindValue(time_created);
 
         if (!query.exec()) {
             if (transaction_started && db.isOpen()) {
@@ -318,38 +252,43 @@ void create_a_barcode_widget::on_create_barcode_pushButton_clicked()
             transaction_started = false;
             qDebug() << "Transaction committed";
         }
-
-        // Clear fields for next entry
-        autoFillDateTime();
-        ui.issued_by_lineEdit->setText(UserSession::getInstance().getCurrentUser());
-        ui.issued_to_lineEdit->clear();
-        ui.type_of_surgery_lineEdit->clear();
-        ui.patient_name_lineEdit->clear();
-        ui.patient_phone_no_lineEdit->clear();
-        ui.patient_other_phone_no_lineEdit->clear();
-        ui.next_of_kins_name_lineEdit->clear();
-        ui.next_of_kins_phone_no_lineEdit->clear();
-        ui.next_of_kins_other_phone_no_lineEdit->clear();
         
-        // Clear the table
-        QStandardItemModel* model = qobject_cast<QStandardItemModel*>(ui.selected_items_tableView->model());
-        if (model) {
-            model->removeRows(0, model->rowCount());
-        }
-
-        // Reset styles
-        QLineEdit* fields[] = {
-            ui.issued_to_lineEdit, ui.type_of_surgery_lineEdit, ui.patient_name_lineEdit,
-            ui.patient_phone_no_lineEdit, ui.next_of_kins_name_lineEdit, ui.next_of_kins_phone_no_lineEdit
-        };
-        
-        for (QLineEdit* field : fields) {
-            field->setPlaceholderText("");
-            field->setStyleSheet("");
-        }
 
         QMessageBox::information(this, "Success", 
             "Batch saved to database. Barcode generation started...");
+        
+        reply = QMessageBox::question(this, "Confirm Patient Information Entry",
+            "Do you want to continue and enter the patient’s information for this surgery type?",
+            QMessageBox::Yes | QMessageBox::No);
+        
+        if (reply == QMessageBox::Yes) {
+            pick_a_set_widget *go_to_surgery = new pick_a_set_widget(pick_a_set_widget::from_create_a_barcode_widget, batch_code);
+            go_to_surgery->setAttribute(Qt::WA_DeleteOnClose);
+
+            go_to_surgery->show();
+
+            this->close();
+        } else {
+            // Clear fields for next entry
+            autoFillDateTime();
+            ui.created_by_lineEdit->setText(UserSession::getInstance().getCurrentUser());
+            ui.type_of_surgery_lineEdit->clear();
+            
+            // Clear the table
+            QStandardItemModel* model = qobject_cast<QStandardItemModel*>(ui.selected_items_tableView->model());
+            if (model) {
+                model->removeRows(0, model->rowCount());
+            }
+
+            // Reset styles
+            QLineEdit* fields[] = { ui.type_of_surgery_lineEdit };
+            
+            for (QLineEdit* field : fields) {
+                field->setPlaceholderText("");
+                field->setStyleSheet("");
+            }
+
+        }
     }
 }
 //exit button
@@ -358,10 +297,6 @@ void create_a_barcode_widget::on_exit_pushButton_clicked() {
     if (transaction_started && db.isOpen()) {
         db.rollback();
         qDebug() << "transaction rolled back";
-    }
-
-    if (db.isOpen()) {
-        db.close();
     }
 
     this->close();
@@ -382,7 +317,7 @@ void create_a_barcode_widget::setUp_selected_items_tableView() {
         }
         }
 
-    //fetch the items from the database. it fetches only for the items associated with the batc_code in batch_code_lineEdit
+    //fetch the items from the database. it fetches only for the items associated with the batch_code in batch_code_lineEdit
     QSqlQuery query(db);
 
     query.prepare("SELECT category, instrument_count, surgical_instrument FROM add_items_into_barcode WHERE batch_code = :batch_code");

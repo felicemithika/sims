@@ -3,6 +3,7 @@
 
 #include "../build/ui_create_a_barcode.h"
 #include "add_items_into_the_barcode.h"
+#include "pick_a_set_widget.h"
 #include <QWidget>
 #include <QDateTime>
 #include <QTimer>
@@ -19,6 +20,8 @@ class create_a_barcode_widget : public QWidget {
 
     public:
         explicit create_a_barcode_widget(QWidget* parent = nullptr);
+    
+    signals:
 
     private slots:
         void autoFillDateTime();
@@ -33,6 +36,7 @@ class create_a_barcode_widget : public QWidget {
         QSqlDatabase db;
         bool transaction_started = false;
         QProcess* python_process;
+        QMessageBox::StandardButton reply;
 
         void setUp_selected_items_tableView();
         bool generate_barcode(const QString& data, const QString& filename);

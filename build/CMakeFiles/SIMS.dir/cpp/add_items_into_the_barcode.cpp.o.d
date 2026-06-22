@@ -470,6 +470,10 @@ CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
  /media/ghostbyte/datadump/sims/cpp/../build/ui_create_a_barcode.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFormLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qformlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGridLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHeaderView \
@@ -481,30 +485,36 @@ CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTableView \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtableview.h \
  /media/ghostbyte/datadump/sims/cpp/create_a_barcode.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
+ /media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.h \
+ /media/ghostbyte/datadump/sims/cpp/../build/ui_pick_a_set_widget.h \
+ /media/ghostbyte/datadump/sims/cpp/DBManager.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlDatabase \
  /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqldatabase.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsqlglobal.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsql-config.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSql/qtsqlexports.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetaobject.h \
+ /media/ghostbyte/datadump/sims/cpp/user_session.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlQuery \
  /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqlquery.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqldatabase.h \
  /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlError \
  /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqlerror.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QStandardItemModel \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qstandarditemmodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMessageBox \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmessagebox.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialog.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialogbuttonbox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QStandardItemModel \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qstandarditemmodel.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \

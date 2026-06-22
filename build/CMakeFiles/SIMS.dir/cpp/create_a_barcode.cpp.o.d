@@ -391,12 +391,16 @@ CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlocale.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qguiapplication_platform.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGridLayout \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFormLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qformlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGridLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHeaderView \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qheaderview.h \
@@ -443,6 +447,8 @@ CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTableView \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtableview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
  /media/ghostbyte/datadump/sims/cpp/add_items_into_the_barcode.h \
@@ -450,7 +456,6 @@ CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QComboBox \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qcombobox.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPlainTextEdit \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qplaintextedit.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtextedit.h \
@@ -480,7 +485,6 @@ CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontdatabase.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpinBox \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qspinbox.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtSql/QSqlDatabase \
  /usr/include/x86_64-linux-gnu/qt6/QtSql/qsqldatabase.h \
@@ -497,27 +501,26 @@ CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmessagebox.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialog.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialogbuttonbox.h \
+ /media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.h \
+ /media/ghostbyte/datadump/sims/cpp/../build/ui_pick_a_set_widget.h \
+ /media/ghostbyte/datadump/sims/cpp/DBManager.h \
+ /media/ghostbyte/datadump/sims/cpp/user_session.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QStandardItemModel \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qstandarditemmodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QStandardItemModel \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qstandarditemmodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h \
  /media/ghostbyte/datadump/sims/cpp/login_screen.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h \
  /media/ghostbyte/datadump/sims/cpp/../build/ui_login-screen.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFormLayout \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qformlayout.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLayout \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
- /media/ghostbyte/datadump/sims/cpp/user_session.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringBuilder \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringbuilder.h \

@@ -9,12 +9,12 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent) {
     ui.setupUi(this);
     showMaximized();
 
-    barcodewidget = nullptr;
+    select_surgery = nullptr;
     addintoinventory = nullptr;
     viewcreatedbatches = nullptr;
     viewitemsintheinventory = nullptr;
 
-    style_button_as_link(ui.create_a_barcode_pushButton);
+    style_button_as_link(ui.go_into_surgery_pushButton);
     style_button_as_link(ui.add_items_into_inventory_pushButton);
     style_button_as_link(ui.view_created_batches_pushButton);
     style_button_as_link(ui.check_items_in_the_inventory_pushButton);
@@ -29,6 +29,8 @@ QWidget* MainWindow::wrapInCenteredContainer(QWidget* content)
 {
     QWidget* container = new QWidget();
     QVBoxLayout* layout = new QVBoxLayout(container);
+
+    container->setAttribute(Qt::WA_DeleteOnClose);
 
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setAlignment(Qt::AlignCenter);
@@ -92,7 +94,7 @@ void MainWindow::set_active_button(QPushButton* activeButton) {
         "    padding: 8px;"
         "}";
     
-    ui.create_a_barcode_pushButton->setStyleSheet(defaultStyle);
+    ui.go_into_surgery_pushButton->setStyleSheet(defaultStyle);
     ui.add_items_into_inventory_pushButton->setStyleSheet(defaultStyle);
     ui.view_created_batches_pushButton->setStyleSheet(defaultStyle);
     ui.check_items_in_the_inventory_pushButton->setStyleSheet(defaultStyle);
@@ -105,20 +107,26 @@ void MainWindow::set_active_button(QPushButton* activeButton) {
 void MainWindow::show_empty_placeholder(const QString& message) {
 
     QWidget* placeholderWidget = new QWidget();
+    placeholderWidget->setAttribute(Qt::WA_DeleteOnClose);
     QVBoxLayout* placeholderLayout = new QVBoxLayout(placeholderWidget);
     placeholderLayout->setAlignment(Qt::AlignCenter);
+
+    
+    
 
     QLabel* placeholderLabel = new QLabel(message.isEmpty() ? "Select an option from above." : message);
     placeholderLabel->setAlignment(Qt::AlignCenter);
     placeholderLabel->setStyleSheet("font-size: 16px; color:gray");
 
+    placeholderLabel->setAttribute(Qt::WA_DeleteOnClose);
+
     placeholderLayout->addWidget(placeholderLabel);
     ui.scrollArea->takeWidget();
     ui.scrollArea->setWidget(wrapInCenteredContainer(placeholderWidget));
 
-    if (barcodewidget && barcodewidget->parent() != placeholderWidget) {
-        delete barcodewidget;
-        barcodewidget = nullptr;
+    if (select_surgery && select_surgery->parent() != placeholderWidget) {
+        delete select_surgery;
+        select_surgery = nullptr;
     }
     if (addintoinventory && addintoinventory->parent() != placeholderWidget) {
         delete addintoinventory;
@@ -135,16 +143,20 @@ void MainWindow::show_empty_placeholder(const QString& message) {
 
 }
 
-void MainWindow::on_create_a_barcode_pushButton_clicked() {
+void MainWindow::on_go_into_surgery_pushButton_clicked() {
 
-    if (!barcodewidget) {
-        barcodewidget = new create_a_barcode_widget();
+    if (!select_surgery) {
+        select_surgery = new select_the_surgery_widget();
+        select_surgery->setAttribute(Qt::WA_DeleteOnClose);
+        connect(select_surgery, &QObject::destroyed, this, [this]() {
+            select_surgery=nullptr;
+        });
     }
 
     ui.scrollArea->takeWidget();
-    ui.scrollArea->setWidget(wrapInCenteredContainer(barcodewidget));
+    ui.scrollArea->setWidget(wrapInCenteredContainer(select_surgery));
 
-    barcodewidget->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
+    select_surgery->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 
     if (addintoinventory) {
         delete addintoinventory;
@@ -157,13 +169,14 @@ void MainWindow::on_create_a_barcode_pushButton_clicked() {
         viewitemsintheinventory = nullptr;
     }
 
-    set_active_button(ui.create_a_barcode_pushButton);
+    set_active_button(ui.go_into_surgery_pushButton);
 }
 
 void MainWindow::on_add_items_into_inventory_pushButton_clicked() {
 
     if (!addintoinventory) {
         addintoinventory = new add_items_into_inventory();
+        addintoinventory->setAttribute(Qt::WA_DeleteOnClose);
     }
 ;
 
@@ -172,9 +185,9 @@ void MainWindow::on_add_items_into_inventory_pushButton_clicked() {
 
     addintoinventory->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 
-    if (barcodewidget) {
-        delete barcodewidget;
-        barcodewidget = nullptr;
+    if (select_surgery) {
+        delete select_surgery;
+        select_surgery = nullptr;
     } else if (viewcreatedbatches) {
         delete viewcreatedbatches;
         viewcreatedbatches = nullptr;
@@ -190,6 +203,7 @@ void MainWindow::on_view_created_batches_pushButton_clicked() {
 
     if (!viewcreatedbatches) {
         viewcreatedbatches = new view_created_batches();
+        viewcreatedbatches->setAttribute(Qt::WA_DeleteOnClose);
     }
 
     ui.scrollArea->takeWidget();
@@ -200,9 +214,9 @@ void MainWindow::on_view_created_batches_pushButton_clicked() {
     if (addintoinventory) {
         delete addintoinventory;
         addintoinventory = nullptr;
-    } else if (barcodewidget) {
-        delete barcodewidget;
-        barcodewidget = nullptr;
+    } else if (select_surgery) {
+        delete select_surgery;
+        select_surgery = nullptr;
     } else if (viewitemsintheinventory) {
         delete viewitemsintheinventory;
         viewitemsintheinventory = nullptr;
@@ -214,6 +228,7 @@ void MainWindow::on_view_created_batches_pushButton_clicked() {
 void MainWindow::on_check_items_in_the_inventory_pushButton_clicked() {
     if (!viewitemsintheinventory) {
         viewitemsintheinventory = new view_items_in_the_inventory_Form();
+        viewitemsintheinventory->setAttribute(Qt::WA_DeleteOnClose);
     }
 
     ui.scrollArea->takeWidget();
@@ -227,9 +242,9 @@ void MainWindow::on_check_items_in_the_inventory_pushButton_clicked() {
     } else if (viewcreatedbatches) {
         delete viewcreatedbatches;
         viewcreatedbatches = nullptr;
-    } else if (barcodewidget) {
-        delete barcodewidget;
-        barcodewidget = nullptr;
+    } else if (select_surgery) {
+        delete select_surgery;
+        select_surgery = nullptr;
     }
 
     set_active_button(ui.check_items_in_the_inventory_pushButton);

@@ -3,6 +3,9 @@
 
 #include <QWidget>
 #include <QTimer>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlError>
 #include "../build/ui_welcome-screen.h"
 
 class WelcomeScreen : public QWidget {
@@ -18,6 +21,7 @@ class WelcomeScreen : public QWidget {
         Ui::welcome_screen ui;
         QTimer *progressTimer;
         int progressValue;
+        QSqlDatabase db;
 
         void cache_user_data();
 };

@@ -4,11 +4,16 @@
   /media/ghostbyte/datadump/sims/build/ui_add_items_into_the_barcode.h \
   /media/ghostbyte/datadump/sims/build/ui_create_a_barcode.h \
   /media/ghostbyte/datadump/sims/build/ui_main_window.h \
+  /media/ghostbyte/datadump/sims/build/ui_pick_a_set_widget.h \
+  /media/ghostbyte/datadump/sims/build/ui_select_the_surgery_widget.h \
   /media/ghostbyte/datadump/sims/build/ui_the_current_inventory.h \
   /media/ghostbyte/datadump/sims/build/ui_view_all_created_batches.h \
+  /media/ghostbyte/datadump/sims/cpp/DBManager.h \
   /media/ghostbyte/datadump/sims/cpp/add_items_into_inventory.h \
   /media/ghostbyte/datadump/sims/cpp/add_items_into_the_barcode.h \
   /media/ghostbyte/datadump/sims/cpp/create_a_barcode.h \
+  /media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.h \
+  /media/ghostbyte/datadump/sims/cpp/select_the_surgery.h \
   /media/ghostbyte/datadump/sims/cpp/user_session.h \
   /media/ghostbyte/datadump/sims/cpp/view_created_batches.h \
   /media/ghostbyte/datadump/sims/cpp/view_the_inventory.h \

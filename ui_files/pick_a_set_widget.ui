@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>pick_a_set_widget</class>
+ <widget class="QWidget" name="pick_a_set_widget">
+  <property name="windowModality">
+   <enum>Qt::WindowModality::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>854</width>
+    <height>690</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Patient's surgical details.</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#pick_a_set_widget {
+	background-color: rgb(0, 0, 0);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="labelAlignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="formAlignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="batch_code_label">
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Batch Code:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="batch_code_lineEdit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>421</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="formLayout_2">
+     <property name="labelAlignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="formAlignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="type_of_surgery_label">
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Type of surgery:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="type_of_surgery_lineEdit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>671</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="verticalSpacing">
+      <number>20</number>
+     </property>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="patient_name_lineEdit">
+       <property name="maximumSize">
+        <size>
+         <width>421</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLineEdit" name="patient_phone_no_lineEdit">
+       <property name="maximumSize">
+        <size>
+         <width>421</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::InputMethodHint::ImhDigitsOnly</set>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="patient_phone_no_label">
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Patient's phone no:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="patient_name_label">
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Patient's name:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="patient_other_phone_no_label">
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Patient's other phone no:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLineEdit" name="patient_other_phone_no_lineEdit">
+       <property name="maximumSize">
+        <size>
+         <width>421</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::InputMethodHint::ImhDigitsOnly</set>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="verticalSpacing">
+      <number>20</number>
+     </property>
+     <item row="0" column="3">
+      <widget class="QLineEdit" name="next_of_kins_phone_no_lineEdit">
+       <property name="maximumSize">
+        <size>
+         <width>421</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::InputMethodHint::ImhDigitsOnly</set>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="next_of_kins_phone_no_label">
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Next of kin's phone no:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="next_of_kins_name_label">
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Next of kin's name:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="next_of_kins_name_lineEdit">
+       <property name="maximumSize">
+        <size>
+         <width>421</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="next_of_kins_other_phone_no_label">
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Next of kin's other phone no:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLineEdit" name="next_of_kins_other_phone_no_lineEdit">
+       <property name="maximumSize">
+        <size>
+         <width>421</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::InputMethodHint::ImhDigitsOnly</set>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <property name="verticalSpacing">
+      <number>20</number>
+     </property>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="theatre_name_comboBox"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="theatre_label">
+       <property name="maximumSize">
+        <size>
+         <width>70</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Theatre:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="issued_to_label">
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Issued To:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLineEdit" name="issued_to_lineEdit">
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="issued_by_label">
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Issued By:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="issued_by_lineEdit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>421</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="date_and_time_picked_label">
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Date and time picked:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLineEdit" name="date_and_time_picked_lineEdit">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>421</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::InputMethodHint::ImhDate</set>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="formLayout_3">
+     <property name="labelAlignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="formAlignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="select_items_label">
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Select items:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="plus_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>31</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>31</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>17</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#plus_pushButton {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
+}</string>
+       </property>
+       <property name="text">
+        <string>+</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="information_label">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+         <italic>true</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>NB: Check to confirm the items that are going into surgery here:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="leftMargin">
+      <number>15</number>
+     </property>
+     <item>
+      <widget class="QTableView" name="selected_items_tableView">
+       <property name="minimumSize">
+        <size>
+         <width>811</width>
+         <height>192</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>811</width>
+         <height>192</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+       <attribute name="horizontalHeaderMinimumSectionSize">
+        <number>90</number>
+       </attribute>
+       <attribute name="horizontalHeaderStretchLastSection">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="formLayout_4">
+     <property name="labelAlignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="formAlignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+     <property name="horizontalSpacing">
+      <number>50</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="done_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>91</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>91</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="text">
+        <string>Done</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="exit_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>91</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>91</width>
+         <height>31</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Open Sans</family>
+         <pointsize>11</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="text">
+        <string>Exit</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

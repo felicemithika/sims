@@ -25,5 +25,4 @@ WelcomeScreen::WelcomeScreen(QWidget *parent) : QWidget(parent), progressValue(0
 
 void WelcomeScreen::cache_user_data() {
     //TODO: add this logic later
-
 }

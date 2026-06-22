@@ -252,6 +252,12 @@
 			null
 		],
 		[
+			"/media/ghostbyte/datadump/sims/cpp/DBManager.h",
+			"Mu",
+			"SVODSI3R2M/moc_DBManager.cpp",
+			null
+		],
+		[
 			"/media/ghostbyte/datadump/sims/cpp/add_items_into_inventory.h",
 			"Mu",
 			"SVODSI3R2M/moc_add_items_into_inventory.cpp",
@@ -285,6 +291,18 @@
 			"/media/ghostbyte/datadump/sims/cpp/main_window.h",
 			"Mu",
 			"SVODSI3R2M/moc_main_window.cpp",
+			null
+		],
+		[
+			"/media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.h",
+			"Mu",
+			"SVODSI3R2M/moc_pick_a_set_widget.cpp",
+			null
+		],
+		[
+			"/media/ghostbyte/datadump/sims/cpp/select_the_surgery.h",
+			"Mu",
+			"SVODSI3R2M/moc_select_the_surgery.cpp",
 			null
 		],
 		[
@@ -371,6 +389,8 @@
 		"/media/ghostbyte/datadump/sims/build/ui_items_inside_a_batch.h",
 		"/media/ghostbyte/datadump/sims/build/ui_login-screen.h",
 		"/media/ghostbyte/datadump/sims/build/ui_main_window.h",
+		"/media/ghostbyte/datadump/sims/build/ui_pick_a_set_widget.h",
+		"/media/ghostbyte/datadump/sims/build/ui_select_the_surgery_widget.h",
 		"/media/ghostbyte/datadump/sims/build/ui_the_current_inventory.h",
 		"/media/ghostbyte/datadump/sims/build/ui_view_all_created_batches.h",
 		"/media/ghostbyte/datadump/sims/build/ui_welcome-screen.h"
@@ -385,6 +405,7 @@
 	"SETTINGS_FILE" : "/media/ghostbyte/datadump/sims/build/CMakeFiles/SIMS_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/media/ghostbyte/datadump/sims/cpp/DBManager.cpp", "Mu", null ],
 		[
 			"/media/ghostbyte/datadump/sims/cpp/add_items_into_inventory.cpp",
 			"Mu",
@@ -400,6 +421,16 @@
 		[ "/media/ghostbyte/datadump/sims/cpp/login_screen.cpp", "Mu", null ],
 		[ "/media/ghostbyte/datadump/sims/cpp/main.cpp", "Mu", null ],
 		[ "/media/ghostbyte/datadump/sims/cpp/main_window.cpp", "Mu", null ],
+		[
+			"/media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/media/ghostbyte/datadump/sims/cpp/select_the_surgery.cpp",
+			"Mu",
+			null
+		],
 		[
 			"/media/ghostbyte/datadump/sims/cpp/view_created_batches.cpp",
 			"Mu",

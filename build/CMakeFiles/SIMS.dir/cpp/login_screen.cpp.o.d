@@ -521,14 +521,17 @@ CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontdatabase.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSpinBox \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qspinbox.h \
+ /media/ghostbyte/datadump/sims/cpp/pick_a_set_widget.h \
+ /media/ghostbyte/datadump/sims/cpp/../build/ui_pick_a_set_widget.h \
+ /media/ghostbyte/datadump/sims/cpp/DBManager.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QStandardItemModel \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qstandarditemmodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QStandardItemModel \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qstandarditemmodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QProcess \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocess.h \
  /media/ghostbyte/datadump/sims/cpp/add_items_into_inventory.h \
@@ -538,4 +541,6 @@ CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o: \
  /media/ghostbyte/datadump/sims/cpp/../build/ui_view_all_created_batches.h \
  /media/ghostbyte/datadump/sims/cpp/view_the_inventory.h \
  /media/ghostbyte/datadump/sims/cpp/../build/ui_the_current_inventory.h \
+ /media/ghostbyte/datadump/sims/cpp/select_the_surgery.h \
+ /media/ghostbyte/datadump/sims/cpp/../build/ui_select_the_surgery_widget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow

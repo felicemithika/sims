@@ -5,6 +5,8 @@
 #include "SVODSI3R2M/moc_create_a_barcode.cpp"
 #include "SVODSI3R2M/moc_login_screen.cpp"
 #include "SVODSI3R2M/moc_main_window.cpp"
+#include "SVODSI3R2M/moc_pick_a_set_widget.cpp"
+#include "SVODSI3R2M/moc_select_the_surgery.cpp"
 #include "SVODSI3R2M/moc_view_created_batches.cpp"
 #include "SVODSI3R2M/moc_view_the_inventory.cpp"
 #include "SVODSI3R2M/moc_welcome-screen.cpp"

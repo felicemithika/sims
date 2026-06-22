@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'login-screen.ui'
 **
-** Created by: Qt User Interface Compiler version 6.4.2
+** Created by: Qt User Interface Compiler version 6.8.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -45,7 +45,7 @@ public:
         login_screen->setWindowModality(Qt::ApplicationModal);
         login_screen->setEnabled(true);
         login_screen->resize(784, 457);
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(login_screen->sizePolicy().hasHeightForWidth());

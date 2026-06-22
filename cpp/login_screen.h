@@ -26,9 +26,6 @@ class loginScreen : public QWidget {
     
     private:
         Ui::login_screen ui;
-        QSqlDatabase db;
-        bool connectToDatabase();
-        void closeDatabase();
 };
 
 #endif
