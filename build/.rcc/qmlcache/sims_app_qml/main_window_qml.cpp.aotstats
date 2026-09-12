@@ -1,0 +1,804 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 17,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on visibility.",
+                        "functionName": "visibility",
+                        "line": 11
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 23,
+                        "durationMicroseconds": 208,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 17
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 22,
+                        "durationMicroseconds": 269,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 25
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 23,
+                        "durationMicroseconds": 239,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 26
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 24,
+                        "durationMicroseconds": 232,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 27
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 27,
+                        "durationMicroseconds": 130,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 34
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 27,
+                        "durationMicroseconds": 119,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 49
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 40,
+                        "durationMicroseconds": 162,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 51
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 27,
+                        "durationMicroseconds": 117,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 58
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 40,
+                        "durationMicroseconds": 173,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 60
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 27,
+                        "durationMicroseconds": 116,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 67
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 40,
+                        "durationMicroseconds": 211,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 69
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 27,
+                        "durationMicroseconds": 128,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 76
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 40,
+                        "durationMicroseconds": 243,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 78
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 22,
+                        "durationMicroseconds": 529,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 98
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 25,
+                        "durationMicroseconds": 237,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 99
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 23,
+                        "durationMicroseconds": 237,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 100
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 24,
+                        "durationMicroseconds": 276,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 101
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 49,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: main_window",
+                        "functionName": "preferredWidth",
+                        "line": 109
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 31,
+                        "durationMicroseconds": 123,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 115
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 43,
+                        "durationMicroseconds": 120,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 126
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 51,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on centerIn.",
+                        "functionName": "centerIn",
+                        "line": 138
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 55,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on horizontalCenter.",
+                        "functionName": "horizontalCenter",
+                        "line": 149
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 178
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 31,
+                        "durationMicroseconds": 119,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 188
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 190,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 195
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 44,
+                        "durationMicroseconds": 164,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 198
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 46,
+                        "durationMicroseconds": 156,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 199
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 32,
+                        "durationMicroseconds": 159,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 201
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 121,
+                        "errorMessage": "Cannot load property down from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 205
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 230
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 35,
+                        "durationMicroseconds": 109,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 236
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 48,
+                        "durationMicroseconds": 182,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 244
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 113,
+                        "errorMessage": "Cannot load property hovered from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 248
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 262
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 35,
+                        "durationMicroseconds": 104,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 268
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 48,
+                        "durationMicroseconds": 164,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 276
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 124,
+                        "errorMessage": "Cannot load property hovered from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 280
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 294
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 35,
+                        "durationMicroseconds": 130,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 302
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 48,
+                        "durationMicroseconds": 183,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 310
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 122,
+                        "errorMessage": "Cannot load property hovered from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 314
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 330
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 31,
+                        "durationMicroseconds": 116,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 340
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 163,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 347
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 44,
+                        "durationMicroseconds": 144,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 350
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 46,
+                        "durationMicroseconds": 140,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 351
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 32,
+                        "durationMicroseconds": 138,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 353
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 135,
+                        "errorMessage": "Cannot load property hovered from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 357
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 380
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 35,
+                        "durationMicroseconds": 111,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 388
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 48,
+                        "durationMicroseconds": 164,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 396
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 408
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 35,
+                        "durationMicroseconds": 99,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 416
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 48,
+                        "durationMicroseconds": 172,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 424
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 438
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 31,
+                        "durationMicroseconds": 107,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 448
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 166,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 455
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 44,
+                        "durationMicroseconds": 163,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 458
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 46,
+                        "durationMicroseconds": 167,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 459
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 32,
+                        "durationMicroseconds": 145,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 461
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 122,
+                        "errorMessage": "Cannot load property hovered from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 465
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 488
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 35,
+                        "durationMicroseconds": 104,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 496
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 48,
+                        "durationMicroseconds": 166,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 504
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 516
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 35,
+                        "durationMicroseconds": 101,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 524
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 48,
+                        "durationMicroseconds": 159,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 532
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 546
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 31,
+                        "durationMicroseconds": 100,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 555
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 176,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 562
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 44,
+                        "durationMicroseconds": 178,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 565
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 46,
+                        "durationMicroseconds": 165,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 566
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 32,
+                        "durationMicroseconds": 199,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 568
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 32,
+                        "durationMicroseconds": 129,
+                        "errorMessage": "Cannot load property hovered from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 572
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 594
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 35,
+                        "durationMicroseconds": 109,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 601
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 48,
+                        "durationMicroseconds": 183,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 609
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 621
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 35,
+                        "durationMicroseconds": 119,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 629
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 48,
+                        "durationMicroseconds": 196,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 637
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on onClicked.",
+                        "functionName": "onClicked",
+                        "line": 649
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 35,
+                        "durationMicroseconds": 107,
+                        "errorMessage": "Cannot load property text from (component in /media/ghostbyte/datadump/sims/qml/main_window.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 657
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 48,
+                        "durationMicroseconds": 197,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 665
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 39,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on centerIn.",
+                        "functionName": "centerIn",
+                        "line": 690
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 34,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on top.",
+                        "functionName": "top",
+                        "line": 708
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 35,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on left.",
+                        "functionName": "left",
+                        "line": 709
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 28,
+                        "durationMicroseconds": 355,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 730
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 29,
+                        "durationMicroseconds": 289,
+                        "errorMessage": "",
+                        "functionName": "height",
+                        "line": 731
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 39,
+                        "durationMicroseconds": 112,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 728
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 39,
+                        "durationMicroseconds": 107,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 743
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 39,
+                        "durationMicroseconds": 120,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 760
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 56,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on policy.",
+                        "functionName": "policy",
+                        "line": 797
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 58,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on policy.",
+                        "functionName": "policy",
+                        "line": 798
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 40,
+                        "durationMicroseconds": 63,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: widget_scroll",
+                        "functionName": "width",
+                        "line": 803
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 25,
+                        "durationMicroseconds": 315,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 820
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 23,
+                        "durationMicroseconds": 226,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 821
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 24,
+                        "durationMicroseconds": 221,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 822
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 27,
+                        "durationMicroseconds": 148,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 829
+                    }
+                ],
+                "filepath": "/media/ghostbyte/datadump/sims/qml/main_window.qml"
+            }
+        ],
+        "moduleId": "SIMS(sims_app)"
+    }
+]

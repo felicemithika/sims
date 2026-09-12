@@ -5,13 +5,13 @@ project(SIMS LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Load qt6
-find_package(Qt6 REQUIRED COMPONENTS Widgets Sql)
+# Load Qt6
+find_package(Qt6 REQUIRED COMPONENTS Widgets Sql Qml Quick)
 
 # Find Python
 find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
 
-# Enable automatic qt handling 
+# Enable automatic Qt handling
 set(CMAKE_AUTOUIC OFF)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -35,24 +35,42 @@ endforeach()
 # Collect .cpp sources
 file(GLOB CPP_SOURCES "cpp/*.cpp")
 
-#QRC resources
+# QRC resources
 file(GLOB RESOURCE_FILES "resources/*.qrc")
 
 # Add executable
-add_executable(${PROJECT_NAME}
+add_executable(sims_app
   ${CPP_SOURCES}
   ${GENERATED_UI_HEADERS}
   ${WRAPPER_HEADER}
   ${RESOURCE_FILES}
 )
 
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
+# QML module
+file(GLOB_RECURSE QML_FILES CONFIGURE_DEPENDS
+    RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}"
+    "qml/*.qml"
+)
+
+qt_add_qml_module(sims_app
+    URI SIMS
+    VERSION 1.0
+    QML_FILES
+        ${QML_FILES}
+) 
+
+target_include_directories(sims_app PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
 
 # Link Qt
-target_link_libraries(${PROJECT_NAME}  Qt6::Widgets Qt6::Sql)
+target_link_libraries(sims_app PRIVATE
+    Qt6::Widgets
+    Qt6::Sql
+    Qt6::Qml
+    Qt6::Quick
+)
 
 # Copy Python script to build directory
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+add_custom_command(TARGET sims_app POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy
     ${CMAKE_CURRENT_SOURCE_DIR}/python/barcode_generator.py
     ${CMAKE_CURRENT_BINARY_DIR}/python/barcode_generator.py

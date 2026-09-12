@@ -1,4 +1,4 @@
-#include "select_the_surgery.h"
+/*#include "select_the_surgery.h"
 
 select_the_surgery_widget::select_the_surgery_widget(QWidget* parent) : QWidget(parent) {
     this->setObjectName("select_the_surgery_widget");
@@ -34,11 +34,11 @@ void select_the_surgery_widget::type_of_surgery_dropdown(){
 }
 
 void select_the_surgery_widget::on_new_batch_pushButton_clicked() {
-    create_a_batch = new create_a_barcode_widget();
+   /* create_a_batch = new create_a_barcode_widget();
     create_a_batch->setAttribute(Qt::WA_DeleteOnClose);
     create_a_batch->show();
-    this->close();
-}
+    this->close();*/
+/*}
 
 void select_the_surgery_widget::on_patients_details_pushButton_clicked() {
     QString type_of_surgery = ui.type_of_surgery_comboBox->currentText();
@@ -51,4 +51,4 @@ void select_the_surgery_widget::on_patients_details_pushButton_clicked() {
 
 void select_the_surgery_widget::on_exit_pushButton_clicked() {
     this->close();
-}
+}*/

@@ -1,0 +1,52 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 12,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Cannot resolve property type  for binding on flags.",
+                        "functionName": "flags",
+                        "line": 11
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 19,
+                        "durationMicroseconds": 1513,
+                        "errorMessage": "Cannot load property finished from (component in /media/ghostbyte/datadump/sims/qml/main.qml)::item with type QObject.",
+                        "functionName": "onLoaded",
+                        "line": 18
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 23,
+                        "durationMicroseconds": 186,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 15
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 17,
+                        "durationMicroseconds": 123,
+                        "errorMessage": "Cannot access value for name loginController",
+                        "functionName": "target",
+                        "line": 28
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 9,
+                        "durationMicroseconds": 46,
+                        "errorMessage": "Cannot retrieve a non-object type by ID: root",
+                        "functionName": "onLoginSuccessful",
+                        "line": 30
+                    }
+                ],
+                "filepath": "/media/ghostbyte/datadump/sims/qml/main.qml"
+            }
+        ],
+        "moduleId": "SIMS(sims_app)"
+    }
+]

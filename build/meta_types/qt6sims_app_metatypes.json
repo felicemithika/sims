@@ -1,0 +1,3006 @@
+[
+    {
+        "classes": [
+            {
+                "className": "add_items_into_inventory",
+                "lineNumber": 13,
+                "object": true,
+                "qualifiedClassName": "add_items_into_inventory",
+                "slots": [
+                    {
+                        "access": "private",
+                        "index": 0,
+                        "name": "on_add_item_pushButton_clicked",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QWidget"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "add_items_into_inventory.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "add_items_Form",
+                "lineNumber": 13,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "category",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "load_surgical_instruments",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "category",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "instrument_count",
+                                "type": "int"
+                            },
+                            {
+                                "name": "surgical_instrument",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "comments",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 7,
+                        "name": "add_requested_item",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "batch_code",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "set_batch_code",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "category_list",
+                        "notify": "category_list_changed",
+                        "read": "category_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "surgical_instrument_list",
+                        "notify": "surgical_instrument_list_changed",
+                        "read": "surgical_instrument_list",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "add_items_Form",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "items_added",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "category_list_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "surgical_instrument_list_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 3,
+                        "name": "success_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 4,
+                        "name": "warning_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 5,
+                        "name": "error_message",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "add_items_into_the_barcode.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "create_a_barcode_widget",
+                "lineNumber": 19,
+                "methods": [
+                    {
+                        "access": "public",
+                        "index": 10,
+                        "name": "auto_fill_items",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 11,
+                        "name": "start_items_transaction",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 12,
+                        "name": "rollback_items_transaction",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 13,
+                        "name": "setUp_selected_items_tableView",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "surgery_type",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 14,
+                        "name": "create_batch",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "batch_code",
+                        "notify": "batch_code_changed",
+                        "read": "batch_code",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "date_created",
+                        "notify": "date_created_changed",
+                        "read": "date_created",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "time_created",
+                        "notify": "time_created_changed",
+                        "read": "time_created",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "session_user",
+                        "notify": "session_user_changed",
+                        "read": "session_user",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "create_a_barcode_widget",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "batch_code_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "date_created_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "time_created_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "session_user_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "items",
+                                "type": "QVariantList"
+                            }
+                        ],
+                        "index": 4,
+                        "name": "selected_items_updated",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 5,
+                        "name": "success_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "warning_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 7,
+                        "name": "error_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "batch_code",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "batch_created",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "exit_code",
+                                "type": "int"
+                            },
+                            {
+                                "name": "exit_status",
+                                "type": "QProcess::ExitStatus"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "on_barcode_generated",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "create_a_barcode.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "end_autoclaving",
+                "lineNumber": 17,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "barcode",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "process_barcode",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 14,
+                        "name": "auto_fill",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "scanned_by",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "current_scan_date_n_time",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 15,
+                        "name": "confirm_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "comment",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 16,
+                        "name": "reject_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 17,
+                        "name": "start_barcode_scanning",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 18,
+                        "name": "stop_barcode_scanning",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "batch_code",
+                        "notify": "batch_code_changed",
+                        "read": "batch_code",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "type_of_surgery",
+                        "notify": "type_of_surgery_changed",
+                        "read": "type_of_surgery",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "patients_name",
+                        "notify": "patients_name_changed",
+                        "read": "patients_name",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "last_scan_date_n_time",
+                        "notify": "last_scan_date_n_time_changed",
+                        "read": "last_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "session_user",
+                        "notify": "session_user_changed",
+                        "read": "session_user",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "current_scan_date_n_time",
+                        "notify": "current_scan_date_n_time_changed",
+                        "read": "current_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "end_autoclaving",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "batch_code_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "type_of_surgery_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "patients_name_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "last_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "session_user_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "current_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "items",
+                                "type": "QVariantList"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "items_loaded",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "name": "barcode_accepted",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "barcode_rejected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "success_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 10,
+                        "name": "warning_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "error_message",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "index": 12,
+                        "name": "read_terminal_input",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "end_autoclaving.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "loginScreen",
+                "lineNumber": 7,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "username",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "password",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 3,
+                        "name": "login",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "cancelLogin",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "loginScreen",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "loginSuccessful",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "loginCancelled",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 2,
+                        "name": "loginFailed",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "login_screen.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "pick_a_set_widget",
+                "lineNumber": 20,
+                "methods": [
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "getSurgeryTypes",
+                        "returnType": "QStringList"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "surgery_type",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "select_batch",
+                        "returnType": "QVariantMap"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "batch_code",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 7,
+                        "name": "get_batch_items",
+                        "returnType": "QVariantMap"
+                    },
+                    {
+                        "access": "public",
+                        "index": 8,
+                        "name": "commit_transaction",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "index": 9,
+                        "name": "rollback_transaction",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "index": 10,
+                        "name": "auto_fill",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "batch_code",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "type_of_surgery",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "patients_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "patients_phone_no",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "patients_other_phone_no",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "next_of_kins_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "next_of_kins_phone_no",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "next_of_kins_other_phone_no",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "theatre",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "issued_to",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "issued_by",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "date_and_time_picked",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "save_patient_details",
+                        "returnType": "QVariantMap"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "session_user",
+                        "notify": "session_user_changed",
+                        "read": "session_user",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "date_time_created",
+                        "notify": "date_time_created_changed",
+                        "read": "date_time_created",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "pick_a_set_widget",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "session_user_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "date_time_created_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 2,
+                        "name": "success_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 3,
+                        "name": "warning_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 4,
+                        "name": "error_message",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "pick_a_set_widget.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "post_decontamination",
+                "lineNumber": 17,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "barcode",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "process_barcode",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 14,
+                        "name": "auto_fill",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "scanned_by",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "current_scan_date_n_time",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 15,
+                        "name": "confirm_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "comment",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 16,
+                        "name": "reject_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 17,
+                        "name": "start_barcode_scanning",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 18,
+                        "name": "stop_barcode_scanning",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "batch_code",
+                        "notify": "batch_code_changed",
+                        "read": "batch_code",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "type_of_surgery",
+                        "notify": "type_of_surgery_changed",
+                        "read": "type_of_surgery",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "patients_name",
+                        "notify": "patients_name_changed",
+                        "read": "patients_name",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "last_scan_date_n_time",
+                        "notify": "last_scan_date_n_time_changed",
+                        "read": "last_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "session_user",
+                        "notify": "session_user_changed",
+                        "read": "session_user",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "current_scan_date_n_time",
+                        "notify": "current_scan_date_n_time_changed",
+                        "read": "current_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "post_decontamination",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "batch_code_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "type_of_surgery_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "patients_name_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "last_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "session_user_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "current_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "items",
+                                "type": "QVariantList"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "items_loaded",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "name": "barcode_accepted",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "barcode_rejected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "success_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 10,
+                        "name": "warning_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "error_message",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "index": 12,
+                        "name": "read_terminal_input",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "post_decontamination.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "post_packaging",
+                "lineNumber": 17,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "barcode",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "process_barcode",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 14,
+                        "name": "auto_fill",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "scanned_by",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "current_scan_date_n_time",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 15,
+                        "name": "confirm_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "comment",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 16,
+                        "name": "reject_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 17,
+                        "name": "start_barcode_scanning",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 18,
+                        "name": "stop_barcode_scanning",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "batch_code",
+                        "notify": "batch_code_changed",
+                        "read": "batch_code",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "type_of_surgery",
+                        "notify": "type_of_surgery_changed",
+                        "read": "type_of_surgery",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "patients_name",
+                        "notify": "patients_name_changed",
+                        "read": "patients_name",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "last_scan_date_n_time",
+                        "notify": "last_scan_date_n_time_changed",
+                        "read": "last_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "session_user",
+                        "notify": "session_user_changed",
+                        "read": "session_user",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "current_scan_date_n_time",
+                        "notify": "current_scan_date_n_time_changed",
+                        "read": "current_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "post_packaging",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "batch_code_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "type_of_surgery_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "patients_name_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "last_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "session_user_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "current_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "items",
+                                "type": "QVariantList"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "items_loaded",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "name": "barcode_accepted",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "barcode_rejected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "success_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 10,
+                        "name": "warning_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "error_message",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "index": 12,
+                        "name": "read_terminal_input",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "post_packaging.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "post_store",
+                "lineNumber": 17,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "barcode",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "process_barcode",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 14,
+                        "name": "auto_fill",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "scanned_by",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "current_scan_date_n_time",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 15,
+                        "name": "confirm_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "comment",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 16,
+                        "name": "reject_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 17,
+                        "name": "start_barcode_scanning",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 18,
+                        "name": "stop_barcode_scanning",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "batch_code",
+                        "notify": "batch_code_changed",
+                        "read": "batch_code",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "type_of_surgery",
+                        "notify": "type_of_surgery_changed",
+                        "read": "type_of_surgery",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "patients_name",
+                        "notify": "patients_name_changed",
+                        "read": "patients_name",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "last_scan_date_n_time",
+                        "notify": "last_scan_date_n_time_changed",
+                        "read": "last_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "session_user",
+                        "notify": "session_user_changed",
+                        "read": "session_user",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "current_scan_date_n_time",
+                        "notify": "current_scan_date_n_time_changed",
+                        "read": "current_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "post_store",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "batch_code_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "type_of_surgery_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "patients_name_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "last_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "session_user_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "current_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "items",
+                                "type": "QVariantList"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "items_loaded",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "name": "barcode_accepted",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "barcode_rejected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "success_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 10,
+                        "name": "warning_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "error_message",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "index": 12,
+                        "name": "read_terminal_input",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "post_store.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "post_theatre",
+                "lineNumber": 17,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "barcode",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "process_barcode",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 14,
+                        "name": "auto_fill",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "scanned_by",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "current_scan_date_n_time",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 15,
+                        "name": "confirm_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "comment",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 16,
+                        "name": "reject_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 17,
+                        "name": "start_barcode_scanning",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 18,
+                        "name": "stop_barcode_scanning",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "batch_code",
+                        "notify": "batch_code_changed",
+                        "read": "batch_code",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "type_of_surgery",
+                        "notify": "type_of_surgery_changed",
+                        "read": "type_of_surgery",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "patients_name",
+                        "notify": "patients_name_changed",
+                        "read": "patients_name",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "last_scan_date_n_time",
+                        "notify": "last_scan_date_n_time_changed",
+                        "read": "last_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "session_user",
+                        "notify": "session_user_changed",
+                        "read": "session_user",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "current_scan_date_n_time",
+                        "notify": "current_scan_date_n_time_changed",
+                        "read": "current_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "post_theatre",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "batch_code_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "type_of_surgery_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "patients_name_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "last_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "session_user_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "current_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "items",
+                                "type": "QVariantList"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "items_loaded",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "name": "barcode_accepted",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "barcode_rejected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "success_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 10,
+                        "name": "warning_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "error_message",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "index": 12,
+                        "name": "read_terminal_input",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "post_theatre.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "pre_decontamination",
+                "lineNumber": 17,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "barcode",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "process_barcode",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 14,
+                        "name": "auto_fill",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "scanned_by",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "current_scan_date_n_time",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 15,
+                        "name": "confirm_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "comment",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 16,
+                        "name": "reject_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 17,
+                        "name": "start_barcode_scanning",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 18,
+                        "name": "stop_barcode_scanning",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "batch_code",
+                        "notify": "batch_code_changed",
+                        "read": "batch_code",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "type_of_surgery",
+                        "notify": "type_of_surgery_changed",
+                        "read": "type_of_surgery",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "patients_name",
+                        "notify": "patients_name_changed",
+                        "read": "patients_name",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "last_scan_date_n_time",
+                        "notify": "last_scan_date_n_time_changed",
+                        "read": "last_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "session_user",
+                        "notify": "session_user_changed",
+                        "read": "session_user",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "current_scan_date_n_time",
+                        "notify": "current_scan_date_n_time_changed",
+                        "read": "current_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "pre_decontamination",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "batch_code_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "type_of_surgery_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "patients_name_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "last_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "session_user_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "current_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "items",
+                                "type": "QVariantList"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "items_loaded",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "name": "barcode_accepted",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "barcode_rejected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "success_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 10,
+                        "name": "warning_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "error_message",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "index": 12,
+                        "name": "read_terminal_input",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "pre_decontamination.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "pre_packaging",
+                "lineNumber": 17,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "barcode",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "process_barcode",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 14,
+                        "name": "auto_fill",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "scanned_by",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "current_scan_date_n_time",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 15,
+                        "name": "confirm_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "comment",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 16,
+                        "name": "reject_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 17,
+                        "name": "start_barcode_scanning",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 18,
+                        "name": "stop_barcode_scanning",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "batch_code",
+                        "notify": "batch_code_changed",
+                        "read": "batch_code",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "type_of_surgery",
+                        "notify": "type_of_surgery_changed",
+                        "read": "type_of_surgery",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "patients_name",
+                        "notify": "patients_name_changed",
+                        "read": "patients_name",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "last_scan_date_n_time",
+                        "notify": "last_scan_date_n_time_changed",
+                        "read": "last_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "session_user",
+                        "notify": "session_user_changed",
+                        "read": "session_user",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "current_scan_date_n_time",
+                        "notify": "current_scan_date_n_time_changed",
+                        "read": "current_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "pre_packaging",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "batch_code_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "type_of_surgery_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "patients_name_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "last_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "session_user_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "current_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "items",
+                                "type": "QVariantList"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "items_loaded",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "name": "barcode_accepted",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "barcode_rejected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "success_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 10,
+                        "name": "warning_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "error_message",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "index": 12,
+                        "name": "read_terminal_input",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "pre_packaging.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "pre_theatre",
+                "lineNumber": 17,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "barcode",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "process_barcode",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 14,
+                        "name": "auto_fill",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "scanned_by",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "current_scan_date_n_time",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 15,
+                        "name": "confirm_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "nurse_name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "comment",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 16,
+                        "name": "reject_batch",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 17,
+                        "name": "start_barcode_scanning",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 18,
+                        "name": "stop_barcode_scanning",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "batch_code",
+                        "notify": "batch_code_changed",
+                        "read": "batch_code",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "type_of_surgery",
+                        "notify": "type_of_surgery_changed",
+                        "read": "type_of_surgery",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "patients_name",
+                        "notify": "patients_name_changed",
+                        "read": "patients_name",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "last_scan_date_n_time",
+                        "notify": "last_scan_date_n_time_changed",
+                        "read": "last_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "session_user",
+                        "notify": "session_user_changed",
+                        "read": "session_user",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "current_scan_date_n_time",
+                        "notify": "current_scan_date_n_time_changed",
+                        "read": "current_scan_date_n_time",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "pre_theatre",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "batch_code_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "type_of_surgery_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "patients_name_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "last_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "session_user_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "current_scan_date_n_time_changed",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "items",
+                                "type": "QVariantList"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "items_loaded",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "name": "barcode_accepted",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "barcode_rejected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "success_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 10,
+                        "name": "warning_message",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "error_message",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "index": 12,
+                        "name": "read_terminal_input",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "pre_theatre.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "view_created_batches",
+                "lineNumber": 7,
+                "object": true,
+                "qualifiedClassName": "view_created_batches",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QWidget"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "view_created_batches.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "view_items_in_the_inventory_Form",
+                "lineNumber": 7,
+                "object": true,
+                "qualifiedClassName": "view_items_in_the_inventory_Form",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QWidget"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "view_the_inventory.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "WelcomeScreen",
+                "lineNumber": 11,
+                "object": true,
+                "qualifiedClassName": "WelcomeScreen",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "finished",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QWidget"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "welcome-screen.h",
+        "outputRevision": 68
+    }
+]

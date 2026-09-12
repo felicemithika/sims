@@ -1,4 +1,4 @@
-#ifndef MAIN_WINDOW_H
+/*#ifndef MAIN_WINDOW_H
 #define MAIN_WINDOW_H
 
 #include "../build/ui_main_window.h"
@@ -27,7 +27,7 @@ class MainWindow : public QMainWindow {
 
     private:
         Ui::MainWindow ui;
-        select_the_surgery_widget* select_surgery;
+        //select_the_surgery_widget* select_surgery;
         add_items_into_inventory* addintoinventory;
         view_created_batches* viewcreatedbatches;
         view_items_in_the_inventory_Form* viewitemsintheinventory;
@@ -41,4 +41,4 @@ class MainWindow : public QMainWindow {
         
 };
 
-#endif
+#endif*/

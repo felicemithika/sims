@@ -3,75 +3,52 @@
 #include "main_window.h"
 #include "DBManager.h"
 
-loginScreen::loginScreen(QWidget* parent) : QWidget(parent) {
-    this->setObjectName("login_screen");
-    ui.setupUi(this);
-    this->setFixedSize(601, 359);
+#include <QSqlQuery>
+#include <QSqlError>
+#include <QDebug>
 
-    ui.username->setFocus();
+loginScreen::loginScreen(QObject* parent) : QObject(parent) {}
 
-    //Set password to show dots for privacy
-    ui.password->setEchoMode(QLineEdit::Password);
+//loginScreen::~loginScreen() {}
 
-    //Connect buttons to functions
-    connect(ui.login_Button, &QPushButton::clicked, this, &loginScreen::pressing_loginButton);
-    connect(ui.cancelButton, &QPushButton::clicked, this, &loginScreen::pressing_cancelButton);
-
-    //Connect enter key press to move cursor from usename to password
-    connect(ui.username, &QLineEdit::returnPressed, [this]() {
-        ui.password->setFocus();
-    });
-
-    connect(ui.password, &QLineEdit::returnPressed, [this]() {
-        ui.login_Button->setFocus();
-    });
-}
-
-loginScreen::~loginScreen() {
-}
-
-void loginScreen::pressing_loginButton(){
-    QString username = ui.username->text().trimmed();
-    QString password = ui.password->text().trimmed();
+void loginScreen::login(const QString& username, const QString& password){
+    QString clean_username = username.trimmed();
+    QString clean_password = password.trimmed();
 
     //validate input
-    if (username.isEmpty() || password.isEmpty()) {
-        QMessageBox::warning(this, "Login Failed", 
-            "Please enter both username and password.");
+    if (clean_username.isEmpty() || clean_password.isEmpty()) {
+        emit loginFailed (
+            "Please enter both username and password."
+        );
         return;
     }
 
     QSqlQuery query(database_manager::instance().get_database());
     query.prepare("SELECT * FROM sims_logins WHERE username = :username AND password = :password");
-    query.bindValue(":username", username);
-    query.bindValue(":password", password);
+    query.bindValue(":username", clean_username);
+    query.bindValue(":password", clean_password);
 
     if (query.exec() && query.next()) {
-        QMessageBox::information(this, "Login Successful", QString("Welcome, %1!").arg(username));
-        UserSession::getInstance().setCurrentUser(username);
+        //QMessageBox::information(this, "Login Successful", QString("Welcome, %1!").arg(clean_username));
+        UserSession::getInstance().setCurrentUser(clean_username);
 
-        ui.username->clear();
-        ui.password->clear();
 
         emit loginSuccessful();
-        this->close();
 
 
     } else {
-        QMessageBox::warning(this, "Login Failed!!", "Check your username and password and try again.");
-
-        ui.password->clear();
-        ui.username->setFocus();
+       emit loginFailed (
+        "Check your username and password and try again."
+       );
     }
 }
 
-void loginScreen::pressing_cancelButton() {
-    ui.username->clear();
-    ui.password->clear();
+void loginScreen::cancelLogin() {
+   // ui.username->clear();
+   // ui.password->clear();
 
-    QMessageBox::information(this, "Cancelled", "Exiting the application");
+   // QMessageBox::information(this, "Cancelled", "Exiting the application");
 
     emit loginCancelled();
-    this->close();
 
 }

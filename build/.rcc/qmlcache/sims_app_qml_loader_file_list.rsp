@@ -1,0 +1,12 @@
+--resource
+/media/ghostbyte/datadump/sims/build/.qt/rcc/qmake_SIMS.qrc
+--resource
+/media/ghostbyte/datadump/sims/build/.qt/rcc/sims_app_raw_qml_0.qrc
+/SIMS/qml/add_items_into_batch.qml
+/SIMS/qml/create_batches.qml
+/SIMS/qml/display_batch_n_patient.qml
+/SIMS/qml/login_screen.qml
+/SIMS/qml/main.qml
+/SIMS/qml/main_window.qml
+/SIMS/qml/patient_details.qml
+/SIMS/qml/splash_screen.qml

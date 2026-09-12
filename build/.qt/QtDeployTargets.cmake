@@ -1,2 +1,2 @@
-set(__QT_DEPLOY_TARGET_SIMS_FILE /media/ghostbyte/datadump/sims/build/SIMS)
-set(__QT_DEPLOY_TARGET_SIMS_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_sims_app_FILE /media/ghostbyte/datadump/sims/build/sims_app)
+set(__QT_DEPLOY_TARGET_sims_app_TYPE EXECUTABLE)

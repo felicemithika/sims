@@ -1,0 +1,26 @@
+{
+    "classes": [
+        {
+            "className": "add_items_into_inventory",
+            "lineNumber": 13,
+            "object": true,
+            "qualifiedClassName": "add_items_into_inventory",
+            "slots": [
+                {
+                    "access": "private",
+                    "index": 0,
+                    "name": "on_add_item_pushButton_clicked",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QWidget"
+                }
+            ]
+        }
+    ],
+    "inputFile": "add_items_into_inventory.h",
+    "outputRevision": 68
+}

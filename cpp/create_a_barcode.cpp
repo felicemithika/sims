@@ -7,6 +7,7 @@
 #include <QDir>
 #include <QPixmap>
 #include <QLabel>
+#include <QVariantMap>
 
 
 /*
@@ -15,10 +16,10 @@ Widget responsible with the task of creating batches and barcodes
 ##################################################################################
 */
 
-create_a_barcode_widget::create_a_barcode_widget(QWidget *parent) : QWidget(parent)
+create_a_barcode_widget::create_a_barcode_widget(QObject *parent) : QObject(parent)
 {
-    this->setObjectName("create_a_barcode_widget");
-    ui.setupUi(this);
+    //this->setObjectName("create_a_barcode_widget");
+    //ui.setupUi(this);
 
     //connect to the database.
     db = database_manager::instance().get_database();
@@ -30,32 +31,38 @@ create_a_barcode_widget::create_a_barcode_widget(QWidget *parent) : QWidget(pare
         dir.mkpath(".");
     }
 
-    autoFillDateTime();
+    //autoFillDateTime();
 
     //fetch the logged in user from user_session.h
-    QString username = UserSession::getInstance().getCurrentUser();
-    ui.created_by_lineEdit->setText(username);
+    //ui.created_by_lineEdit->setText(username);
 
     //populate the table with items that are going into the surgery.
     setUp_selected_items_tableView();
 
     //move the focus to the next input field or button when you press enter
-    ui.type_of_surgery_lineEdit->setFocus();
-    connect(ui.type_of_surgery_lineEdit, &QLineEdit::returnPressed, [this]() {
-        ui.plus_pushButton->setFocus();
-    });
-    connect(ui.plus_pushButton, &QPushButton::clicked, [this]() {
-        ui.create_barcode_pushButton->setFocus();
-    });
+    //ui.type_of_surgery_lineEdit->setFocus();
+    //connect(ui.type_of_surgery_lineEdit, &QLineEdit::returnPressed, [this]() {
+   //     ui.plus_pushButton->setFocus();
+   // });
+   // connect(ui.plus_pushButton, &QPushButton::clicked, [this]() {
+      //  ui.create_barcode_pushButton->setFocus();
+    //});
 }
 
 bool create_a_barcode_widget::generate_barcode(const QString& data, const QString& filename) {
+    if (python_process) {
+        qDebug() << "Barcode generation already running";
+        return false;
+    }
+    
     python_process = new QProcess(this);
     
-    connect(python_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-            this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
-                this->on_barcode_generated(exitCode, exitStatus);
-            });
+    connect(
+        python_process,
+        QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+        this,
+        &create_a_barcode_widget::on_barcode_generated   
+    );
     
     QString scriptPath = "../python/barcode_generator.py";
     
@@ -71,57 +78,103 @@ bool create_a_barcode_widget::generate_barcode(const QString& data, const QStrin
     python_process->start(pythonExecutable, arguments);
     
     if (!python_process->waitForStarted()) {
-        qDebug() << "Failed to start Python process";
+        qDebug() << "Failed to start Python process:" << python_process->errorString();
+        python_process->deleteLater();
+        python_process = nullptr;
+
         return false;
     }
     
-    return true;
+    return true; 
 }
 
 void create_a_barcode_widget::on_barcode_generated(int exitCode, QProcess::ExitStatus exitStatus) {
-    if (exitStatus == QProcess::NormalExit && exitCode == 0) {
-        QString output = python_process->readAllStandardOutput();
-        QString error = python_process->readAllStandardError();
-        
-        qDebug() << "Python output:" << output;
-        
-        if (output.contains("SUCCESS:")) {
-            // Extract filename from output
-            QString barcodeFile = output.split(":").last().trimmed();
-            qDebug() << "Barcode saved to:" << barcodeFile;
-            
-            // You can now display the barcode image in your UI if needed
-            QPixmap pixmap(barcodeFile);
-            if (!pixmap.isNull()) {
-                // Create a label to show the barcode
-                QLabel* barcodeLabel = new QLabel(this);
-                barcodeLabel->setPixmap(pixmap.scaled(300, 150, Qt::KeepAspectRatio, Qt::SmoothTransformation));
-                barcodeLabel->setAlignment(Qt::AlignCenter);
-                
-                // Add to layout or show in a dialog
-                QMessageBox msgBox;
-                msgBox.setWindowTitle("Barcode Generated");
-                msgBox.setText("Barcode has been generated successfully!");
-                msgBox.setIcon(QMessageBox::Information);
-                msgBox.layout()->addWidget(barcodeLabel);
-                msgBox.exec();
-            }
-        }
-    } else {
-        QString error = python_process->readAllStandardError();
-        qDebug() << "Python error:" << error;
-        QMessageBox::warning(this, "Barcode Error", 
-            "Failed to generate barcode:\n" + error);
+    if (!python_process) {
+        return;
     }
+
+    QString output = python_process->readAllStandardOutput();
+    QString error = python_process->readAllStandardError();
     
+    qDebug() << "Barcode generator output:" << output;
+    qDebug() << "Barcode generator error" << error;
+
+    bool success = exitStatus == QProcess::NormalExit && exitCode == 0 && output.contains("SUCCESS:");
+
+    if (!success) {
+        qDebug() << "Barcode generation failed.";
+
+        create_in_progress = false;
+
+        if (transaction_started && db.isOpen()) {
+            db.rollback();
+
+            transaction_started = false;
+
+            qDebug() << "Transaction rolled back because barcode generation failed.";
+        }
+
+        QString message = "Barcode generation failed.";
+
+        if (!error.trimmed().isEmpty()) {
+            message += "\n\n" + error.trimmed();
+        }
+
+        emit error_message(message);
+
+        python_process->deleteLater();
+
+        return;
+    }
+
+    qDebug() << "Barcode generated successfully.";
+
+    if (transaction_started) {
+        if (!db.commit()) {
+            qDebug() << "Failed to commit transaction:" << db.lastError().text();
+
+            create_in_progress = false;
+
+            emit error_message("The barcode was generated, but the database transaction could not commited:\n" + db.lastError().text());
+
+            python_process->deleteLater();
+            python_process = nullptr;
+
+            return;
+        }
+
+        transaction_started = false;
+        qDebug() << "Transaction committed.";
+    }
+
+    create_in_progress = false;
+
+    QString generated_file;
+
+    QStringList output_lines = output.split('\n', Qt::SkipEmptyParts);
+
+    for (const QString &line : output_lines) {
+        if (line.startsWith("SUCCESS:")) {
+            generated_file = line.mid(QString("SUCCESS:").length()).trimmed();
+            break;
+        }
+    }
+    qDebug() << "Barcode file:" << generated_file;
+
+    emit batch_created(pending_batch_code);
+
+    emit success_message("Batch created successfully.\n\nThe barcode has also been generated");
+
     python_process->deleteLater();
     python_process = nullptr;
+
+    pending_batch_code.clear();
+    pending_barcode_filename.clear();
 }
 
 
 //generate the batch_code and auto fill batch_code_lineEdit, date_picked_lineEdit, and time_picked_lineEdit
-void create_a_barcode_widget::autoFillDateTime()
-{
+void create_a_barcode_widget::auto_fill_items() {
     QDateTime current = QDateTime::currentDateTime();
     QTime time = current.time();
     QDate date = QDate::currentDate();
@@ -137,20 +190,44 @@ void create_a_barcode_widget::autoFillDateTime()
     int ms = time.msec();
     formatted += QString("%1").arg(ms / 10, 2, 10, QChar('0'));
 
-    ui.batch_code_lineEdit->setText(formatted);
-    ui.date_created_lineEdit->setText(date.toString());
-    ui.time_created_lineEdit->setText(time.toString());
+    QString username = UserSession::getInstance().getCurrentUser();
+
+    m_batch_code = formatted;
+    m_date_created = date.toString();
+    m_time_created = time.toString();
+    m_session_user = username;
+
+    emit batch_code_changed();
+    emit date_created_changed();
+    emit time_created_changed();
+    emit session_user_changed();
+}
+
+QString create_a_barcode_widget::batch_code() const {
+    return m_batch_code;
+}
+
+QString create_a_barcode_widget::date_created() const {
+    return m_date_created;
+}
+
+QString create_a_barcode_widget::time_created() const {
+    return m_time_created;
+}
+
+QString create_a_barcode_widget::session_user() const {
+    return m_session_user;
 }
 
 //open add_items_into_barcode.h widget
-void create_a_barcode_widget::on_plus_pushButton_clicked()
+/*void create_a_barcode_widget::on_plus_pushButton_clicked()
 {
     //start a transaction to track the changes in the db.
     db.transaction();
     transaction_started = true;
 
     /*fetch the text in batch_code_lineEdit, and db connection and pass it to the add_items_form class in add_items_into_barcode.h.*/
-    QString batch_code = ui.batch_code_lineEdit->text().trimmed();
+    /*QString batch_code = ui.batch_code_lineEdit->text().trimmed();
     add_items_Form *itemsinbarcode = new add_items_Form(batch_code, &db);
     
     //Delete this widget once it closes
@@ -158,141 +235,196 @@ void create_a_barcode_widget::on_plus_pushButton_clicked()
 
     /*connect the signal in add_items_into_barcode.h so signal items have been added.
     then setUp_selected_items_tableView will update the table with this data*/
-    connect(itemsinbarcode, &add_items_Form::items_added, 
-                        this, &create_a_barcode_widget::setUp_selected_items_tableView);
-    itemsinbarcode->show();
+    /*connect(itemsinbarcode, &add_items_Form::items_added, 
+                      this, &create_a_barcode_widget::setUp_selected_items_tableView);
+   itemsinbarcode->show();
+}*/
+
+void create_a_barcode_widget::start_items_transaction() {
+    if (!db.isOpen()) {
+        if (!db.open()) {
+            qDebug() <<"Failed to open database:" << db.lastError().text();
+            return;
+        }
+    }
+
+    if (transaction_started) {
+        qDebug() <<"Transaction already started";
+        return;
+    }
+
+    if (db.transaction()) {
+        transaction_started = true;
+        qDebug() << "Transction started";
+    } else {
+        qDebug() << "Failed to start transction:" << db.lastError().text();
+    }
+}
+
+void create_a_barcode_widget::rollback_items_transaction() {
+    if (!transaction_started) {
+        qDebug() << "No active transaction to rollback";
+        return;
+    }
+    if (db.rollback()) {
+        transaction_started = false;
+        qDebug() << "Transaction rolled back";
+    } else {
+        qDebug() << "Failed to rollback transaction:" << db.lastError().text();
+    }
 }
 
 //button that add this batch to the database and then generates the barcode. TODO
-void create_a_barcode_widget::on_create_barcode_pushButton_clicked()
-{
 
-    QStringList missing_fields;
+void create_a_barcode_widget::create_batch(const QString &surgery_type) {
+    if (create_in_progress) {
+        qDebug() << "Create operation already in progress";
+        return;
+    }
 
-    QString batch_code = ui.batch_code_lineEdit->text().trimmed();
-    QString type_of_surgery = ui.type_of_surgery_lineEdit->text();
-    QString created_by = ui.created_by_lineEdit->text();
-    QString date_created = ui.date_created_lineEdit->text();
-    QString time_created = ui.time_created_lineEdit->text();
-    QStandardItemModel* model = qobject_cast<QStandardItemModel*>(ui.selected_items_tableView->model());
+    QString type_of_surgery = surgery_type.trimmed();
 
     //check if the fields are empty
-    if (type_of_surgery.isEmpty())
-    {
-        missing_fields << "Issued To";
-        ui.type_of_surgery_lineEdit->setPlaceholderText(" * Required *");
-        ui.type_of_surgery_lineEdit->setStyleSheet("border: 1px solid red;");
+    if (type_of_surgery.isEmpty()) {
+        emit warning_message("Please enter the type of surgery.");
+        return;
+    }
+
+    if (!transaction_started) {
+        emit warning_message("No active batch transaction was found.");
+        return;
+    }
+
+    if (!db.isOpen()) {
+        if (!db.open()) {
+            emit error_message("Failed to connect to the database:\n" + db.lastError().text());
+            return;
+        }
     }
     
     //display an error message box if there are empty fields that should be field
-    if (!missing_fields.isEmpty())
-    {
+    QSqlQuery count_query(db);
+
+    count_query.prepare("SELECT COUNT(*) FROM add_items_into_barcode WHERE batch_code = :batch_code");
+    count_query.bindValue(":batch_code", m_batch_code);
+
+    if (!count_query.exec()) {
+        emit error_message("Failed to check batch items:\n" + count_query.lastError().text());
+        return;
+    }
+
+    if (!count_query.next()) {
+        emit error_message("Failed to verify the items in this batch.");
+        return;
+    }
+
+    int item_count = count_query.value(0).toInt();
+
+    if (item_count == 0) {
+        emit warning_message("No surgical items have been added to this batch.");
+        return;
+    }
+
+    //update the db with the data in the widget
+
+    QSqlQuery query(db);
+
+    query.prepare("INSERT INTO created_batches (batch_code, type_of_surgery, created_by, date_created, time_created ) VALUES (?, ?, ?, ?, ?)");
+    query.addBindValue(m_batch_code);
+    query.addBindValue(type_of_surgery);
+    query.addBindValue(m_session_user);
+    query.addBindValue(m_date_created);
+    query.addBindValue(m_time_created);
+
+    if (!query.exec()) {
+
+        qDebug() << "Failed to create batch:" << query.lastError().text();
+
         if (transaction_started && db.isOpen()) {
             db.rollback();
             transaction_started = false;
         }
-        QString errorMsg = "The following fields are required:\n";
-        for (const QString &field : missing_fields)
-        {
-            errorMsg += ". " + field + "\n";
-        }
 
-        QMessageBox::warning(this, "Missing information", errorMsg);
+        emit error_message("Failed to save the batch:\n" + query.lastError().text());
 
-    } else if (!model || model->rowCount() == 0) {
-
-        QMessageBox::warning(this, "Empty table", "Add surgical equipment for the surgery to the table by pressing the plus (+) button above.");
-
-    } else {
-        if (!db.isOpen()) {
-            if (!db.open())
-        {
-            QMessageBox::critical(this, "Database Error",
-                                "Failed to connect to database: " + db.lastError().text());
-            return;
-        }
-        }
-
-        //update the db with the data in the widget
-
-        QSqlQuery query(db);
-
-        query.prepare("INSERT INTO created_batches (batch_code, type_of_surgery, created_by, date_created, time_created ) VALUES (?, ?, ?, ?, ?)");
-        query.addBindValue(batch_code);
-        query.addBindValue(type_of_surgery);
-        query.addBindValue(created_by);
-        query.addBindValue(date_created);
-        query.addBindValue(time_created);
-
-        if (!query.exec()) {
-            if (transaction_started && db.isOpen()) {
-                db.rollback();
-                transaction_started = false;
-            }
-            QMessageBox::warning(this, "Database Error", 
-                "Failed to save batch: " + query.lastError().text());
-            return;
-        }
-
-        // Generate barcode using the batch code
-        QString barcodeFilename = "barcodes/batch_" + batch_code;
-        
-        // Generate barcode (async)
-        bool barcodeStarted = generate_barcode(batch_code, barcodeFilename);
-        
-        if (!barcodeStarted) {
-            QMessageBox::warning(this, "Barcode Generation", 
-                "Failed to start barcode generation process.");
-            return;
-        }
-
-        // Commit transaction if everything succeeded
-        if (transaction_started) {
-            db.commit();
-            transaction_started = false;
-            qDebug() << "Transaction committed";
-        }
-        
-
-        QMessageBox::information(this, "Success", 
-            "Batch saved to database. Barcode generation started...");
-        
-        reply = QMessageBox::question(this, "Confirm Patient Information Entry",
-            "Do you want to continue and enter the patient’s information for this surgery type?",
-            QMessageBox::Yes | QMessageBox::No);
-        
-        if (reply == QMessageBox::Yes) {
-            pick_a_set_widget *go_to_surgery = new pick_a_set_widget(pick_a_set_widget::from_create_a_barcode_widget, batch_code);
-            go_to_surgery->setAttribute(Qt::WA_DeleteOnClose);
-
-            go_to_surgery->show();
-
-            this->close();
-        } else {
-            // Clear fields for next entry
-            autoFillDateTime();
-            ui.created_by_lineEdit->setText(UserSession::getInstance().getCurrentUser());
-            ui.type_of_surgery_lineEdit->clear();
-            
-            // Clear the table
-            QStandardItemModel* model = qobject_cast<QStandardItemModel*>(ui.selected_items_tableView->model());
-            if (model) {
-                model->removeRows(0, model->rowCount());
-            }
-
-            // Reset styles
-            QLineEdit* fields[] = { ui.type_of_surgery_lineEdit };
-            
-            for (QLineEdit* field : fields) {
-                field->setPlaceholderText("");
-                field->setStyleSheet("");
-            }
-
-        }
+        return;
     }
+
+    // Generate barcode using the batch code
+    QString barcodeFilename = "barcodes/batch_" + m_batch_code;
+
+    pending_batch_code = m_batch_code;
+    pending_barcode_filename = barcodeFilename;
+
+    create_in_progress = true;
+    
+    // Generate barcode (async)
+    bool barcode_started = generate_barcode(m_batch_code, barcodeFilename);
+    
+    if (!barcode_started) {
+        create_in_progress = false;
+
+        if (transaction_started) {
+            db.rollback();
+            transaction_started = false;
+        }
+
+        emit error_message("The batch could not be created because barcode generation could not be started.");
+
+        return;
+    }
+
+    qDebug() << "Batch inserted successfully."
+                << "Waitng for barcode generation before committing.";
+
+   /*// Commit transaction if everything succeeded
+    if (transaction_started) {
+        db.commit();
+        transaction_started = false;
+        qDebug() << "Transaction committed";
+    }
+    
+
+    QMessageBox::information(this, "Success", 
+        "Batch saved to database. Barcode generation started...");
+    
+    reply = QMessageBox::question(this, "Confirm Patient Information Entry",
+        "Do you want to continue and enter the patient’s information for this surgery type?",
+        QMessageBox::Yes | QMessageBox::No);
+    
+    if (reply == QMessageBox::Yes) {
+        pick_a_set_widget *go_to_surgery = new pick_a_set_widget(pick_a_set_widget::from_create_a_barcode_widget, batch_code);
+        qDebug() << batch_code;
+        go_to_surgery->setAttribute(Qt::WA_DeleteOnClose);
+
+        go_to_surgery->show();
+
+        this->close();
+    } else {
+        // Clear fields for next entry
+        autoFillDateTime();
+        ui.created_by_lineEdit->setText(UserSession::getInstance().getCurrentUser());
+        ui.type_of_surgery_lineEdit->clear();
+        
+        // Clear the table
+        QStandardItemModel* model = qobject_cast<QStandardItemModel*>(ui.selected_items_tableView->model());
+        if (model) {
+            model->removeRows(0, model->rowCount());
+        }
+
+        // Reset styles
+        QLineEdit* fields[] = { ui.type_of_surgery_lineEdit };
+        
+        for (QLineEdit* field : fields) {
+            field->setPlaceholderText("");
+            field->setStyleSheet("");
+        }
+
+    }
+} */
 }
 //exit button
-void create_a_barcode_widget::on_exit_pushButton_clicked() {
+/*void create_a_barcode_widget::on_exit_pushButton_clicked() {
     //reverse changes made to the database if a user exits the widget without pressing create
     if (transaction_started && db.isOpen()) {
         db.rollback();
@@ -301,18 +433,22 @@ void create_a_barcode_widget::on_exit_pushButton_clicked() {
 
     this->close();
  
-}
+}*/
 
 //inserts data into the table
 void create_a_barcode_widget::setUp_selected_items_tableView() {
 
-    QString batch_code = ui.batch_code_lineEdit->text().trimmed();
+    QString batch_code = m_batch_code.trimmed();
+
+    if (batch_code.isEmpty()) {
+        qDebug() << "Cannot refresh items table: batch code is empty";
+        return;
+    }
 
      if (!db.isOpen()) {
             if (!db.open())
         {
-            QMessageBox::critical(this, "Database Error",
-                                "Failed to connect to database: " + db.lastError().text());
+            qDebug() << "Database error" << db.lastError().text();
             return;
         }
         }
@@ -324,32 +460,21 @@ void create_a_barcode_widget::setUp_selected_items_tableView() {
     query.bindValue(":batch_code", batch_code);
 
     if (!query.exec()) {
-        QMessageBox::critical(this, "Error", 
-            "Failed to execute query: " + query.lastError().text());
+        qDebug() <<"query error:" << query.lastError().text();
         return;
     }
 
-    QStandardItemModel* customModel = new QStandardItemModel(this);
+    QVariantList items;
 
-    //the headers of the table
-    QStringList headers;
-    headers << "surgical_instrument" << "Instrument_count" << "category";
-    customModel->setHorizontalHeaderLabels(headers);
-
-    int row = 0;
     while (query.next()) {
-        QStandardItem* item1 = new QStandardItem(query.value(0).toString());
-        QStandardItem* item2 = new QStandardItem(query.value(1).toString());
-        QStandardItem* item3 = new QStandardItem(query.value(2).toString());
+        QVariantMap item;
 
-        customModel->setItem(row, 2, item1);
-        customModel->setItem(row, 1, item2);
-        customModel->setItem(row, 0, item3);
+        item["category"] = query.value(0).toString();
+        item["count"] = query.value(1).toString();
+        item["instrument"] = query.value(2).toString();
 
-        row++;
+        items.append(item);
     }
 
-    ui.selected_items_tableView->setModel(customModel);
-
-    ui.selected_items_tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    emit selected_items_updated(items);
 }

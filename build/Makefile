@@ -113,126 +113,488 @@ preinstall/fast:
 
 # clear depends
 depend:
+	$(CMAKE_COMMAND) -P /media/ghostbyte/datadump/sims/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SIMS
+# Target rules for targets named sims_app
 
 # Build rule for target.
-SIMS: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SIMS
-.PHONY : SIMS
+sims_app: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sims_app
+.PHONY : sims_app
 
 # fast build rule for target.
-SIMS/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/build
-.PHONY : SIMS/fast
+sims_app/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build
+.PHONY : sims_app/fast
 
 #=============================================================================
-# Target rules for targets named SIMS_autogen_timestamp_deps
+# Target rules for targets named sims_app_qmltyperegistration
 
 # Build rule for target.
-SIMS_autogen_timestamp_deps: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SIMS_autogen_timestamp_deps
-.PHONY : SIMS_autogen_timestamp_deps
+sims_app_qmltyperegistration: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sims_app_qmltyperegistration
+.PHONY : sims_app_qmltyperegistration
 
 # fast build rule for target.
-SIMS_autogen_timestamp_deps/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS_autogen_timestamp_deps.dir/build.make CMakeFiles/SIMS_autogen_timestamp_deps.dir/build
-.PHONY : SIMS_autogen_timestamp_deps/fast
+sims_app_qmltyperegistration/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app_qmltyperegistration.dir/build.make CMakeFiles/sims_app_qmltyperegistration.dir/build
+.PHONY : sims_app_qmltyperegistration/fast
 
 #=============================================================================
-# Target rules for targets named SIMS_autogen
+# Target rules for targets named all_qmltyperegistrations
 
 # Build rule for target.
-SIMS_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SIMS_autogen
-.PHONY : SIMS_autogen
+all_qmltyperegistrations: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_qmltyperegistrations
+.PHONY : all_qmltyperegistrations
 
 # fast build rule for target.
-SIMS_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS_autogen.dir/build.make CMakeFiles/SIMS_autogen.dir/build
-.PHONY : SIMS_autogen/fast
+all_qmltyperegistrations/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_qmltyperegistrations.dir/build.make CMakeFiles/all_qmltyperegistrations.dir/build
+.PHONY : all_qmltyperegistrations/fast
 
-SIMS_autogen/3YJK5W5UP7/qrc_login.o: SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.o
-.PHONY : SIMS_autogen/3YJK5W5UP7/qrc_login.o
+#=============================================================================
+# Target rules for targets named sims_app_other_files
+
+# Build rule for target.
+sims_app_other_files: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sims_app_other_files
+.PHONY : sims_app_other_files
+
+# fast build rule for target.
+sims_app_other_files/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app_other_files.dir/build.make CMakeFiles/sims_app_other_files.dir/build
+.PHONY : sims_app_other_files/fast
+
+#=============================================================================
+# Target rules for targets named sims_app_qmllint
+
+# Build rule for target.
+sims_app_qmllint: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sims_app_qmllint
+.PHONY : sims_app_qmllint
+
+# fast build rule for target.
+sims_app_qmllint/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app_qmllint.dir/build.make CMakeFiles/sims_app_qmllint.dir/build
+.PHONY : sims_app_qmllint/fast
+
+#=============================================================================
+# Target rules for targets named sims_app_qmllint_json
+
+# Build rule for target.
+sims_app_qmllint_json: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sims_app_qmllint_json
+.PHONY : sims_app_qmllint_json
+
+# fast build rule for target.
+sims_app_qmllint_json/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app_qmllint_json.dir/build.make CMakeFiles/sims_app_qmllint_json.dir/build
+.PHONY : sims_app_qmllint_json/fast
+
+#=============================================================================
+# Target rules for targets named sims_app_qmllint_module
+
+# Build rule for target.
+sims_app_qmllint_module: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sims_app_qmllint_module
+.PHONY : sims_app_qmllint_module
+
+# fast build rule for target.
+sims_app_qmllint_module/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app_qmllint_module.dir/build.make CMakeFiles/sims_app_qmllint_module.dir/build
+.PHONY : sims_app_qmllint_module/fast
+
+#=============================================================================
+# Target rules for targets named all_qmllint
+
+# Build rule for target.
+all_qmllint: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_qmllint
+.PHONY : all_qmllint
+
+# fast build rule for target.
+all_qmllint/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_qmllint.dir/build.make CMakeFiles/all_qmllint.dir/build
+.PHONY : all_qmllint/fast
+
+#=============================================================================
+# Target rules for targets named all_qmllint_json
+
+# Build rule for target.
+all_qmllint_json: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_qmllint_json
+.PHONY : all_qmllint_json
+
+# fast build rule for target.
+all_qmllint_json/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_qmllint_json.dir/build.make CMakeFiles/all_qmllint_json.dir/build
+.PHONY : all_qmllint_json/fast
+
+#=============================================================================
+# Target rules for targets named all_qmllint_module
+
+# Build rule for target.
+all_qmllint_module: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_qmllint_module
+.PHONY : all_qmllint_module
+
+# fast build rule for target.
+all_qmllint_module/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_qmllint_module.dir/build.make CMakeFiles/all_qmllint_module.dir/build
+.PHONY : all_qmllint_module/fast
+
+#=============================================================================
+# Target rules for targets named sims_app_copy_qml
+
+# Build rule for target.
+sims_app_copy_qml: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sims_app_copy_qml
+.PHONY : sims_app_copy_qml
+
+# fast build rule for target.
+sims_app_copy_qml/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app_copy_qml.dir/build.make CMakeFiles/sims_app_copy_qml.dir/build
+.PHONY : sims_app_copy_qml/fast
+
+#=============================================================================
+# Target rules for targets named sims_app_copy_res
+
+# Build rule for target.
+sims_app_copy_res: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sims_app_copy_res
+.PHONY : sims_app_copy_res
+
+# fast build rule for target.
+sims_app_copy_res/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app_copy_res.dir/build.make CMakeFiles/sims_app_copy_res.dir/build
+.PHONY : sims_app_copy_res/fast
+
+#=============================================================================
+# Target rules for targets named module_sims_app_aotstats_target
+
+# Build rule for target.
+module_sims_app_aotstats_target: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 module_sims_app_aotstats_target
+.PHONY : module_sims_app_aotstats_target
+
+# fast build rule for target.
+module_sims_app_aotstats_target/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/module_sims_app_aotstats_target.dir/build.make CMakeFiles/module_sims_app_aotstats_target.dir/build
+.PHONY : module_sims_app_aotstats_target/fast
+
+#=============================================================================
+# Target rules for targets named all_aotstats
+
+# Build rule for target.
+all_aotstats: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all_aotstats
+.PHONY : all_aotstats
+
+# fast build rule for target.
+all_aotstats/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_aotstats.dir/build.make CMakeFiles/all_aotstats.dir/build
+.PHONY : all_aotstats/fast
+
+#=============================================================================
+# Target rules for targets named sims_app_autogen_timestamp_deps
+
+# Build rule for target.
+sims_app_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sims_app_autogen_timestamp_deps
+.PHONY : sims_app_autogen_timestamp_deps
+
+# fast build rule for target.
+sims_app_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app_autogen_timestamp_deps.dir/build.make CMakeFiles/sims_app_autogen_timestamp_deps.dir/build
+.PHONY : sims_app_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named sims_app_autogen
+
+# Build rule for target.
+sims_app_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sims_app_autogen
+.PHONY : sims_app_autogen
+
+# fast build rule for target.
+sims_app_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app_autogen.dir/build.make CMakeFiles/sims_app_autogen.dir/build
+.PHONY : sims_app_autogen/fast
+
+build/.qt/rcc/qrc_qmake_SIMS.o: build/.qt/rcc/qrc_qmake_SIMS.cpp.o
+.PHONY : build/.qt/rcc/qrc_qmake_SIMS.o
 
 # target to build an object file
-SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.o
-.PHONY : SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.o
+build/.qt/rcc/qrc_qmake_SIMS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.qt/rcc/qrc_qmake_SIMS.cpp.o
+.PHONY : build/.qt/rcc/qrc_qmake_SIMS.cpp.o
 
-SIMS_autogen/3YJK5W5UP7/qrc_login.i: SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.i
-.PHONY : SIMS_autogen/3YJK5W5UP7/qrc_login.i
+build/.qt/rcc/qrc_qmake_SIMS.i: build/.qt/rcc/qrc_qmake_SIMS.cpp.i
+.PHONY : build/.qt/rcc/qrc_qmake_SIMS.i
 
 # target to preprocess a source file
-SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.i
-.PHONY : SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.i
+build/.qt/rcc/qrc_qmake_SIMS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.qt/rcc/qrc_qmake_SIMS.cpp.i
+.PHONY : build/.qt/rcc/qrc_qmake_SIMS.cpp.i
 
-SIMS_autogen/3YJK5W5UP7/qrc_login.s: SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.s
-.PHONY : SIMS_autogen/3YJK5W5UP7/qrc_login.s
+build/.qt/rcc/qrc_qmake_SIMS.s: build/.qt/rcc/qrc_qmake_SIMS.cpp.s
+.PHONY : build/.qt/rcc/qrc_qmake_SIMS.s
 
 # target to generate assembly for a file
-SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.s
-.PHONY : SIMS_autogen/3YJK5W5UP7/qrc_login.cpp.s
+build/.qt/rcc/qrc_qmake_SIMS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.qt/rcc/qrc_qmake_SIMS.cpp.s
+.PHONY : build/.qt/rcc/qrc_qmake_SIMS.cpp.s
 
-SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.o: SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o
-.PHONY : SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.o
+build/.qt/rcc/qrc_sims_app_raw_qml_0.o: build/.qt/rcc/qrc_sims_app_raw_qml_0.cpp.o
+.PHONY : build/.qt/rcc/qrc_sims_app_raw_qml_0.o
 
 # target to build an object file
-SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o
-.PHONY : SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o
+build/.qt/rcc/qrc_sims_app_raw_qml_0.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.qt/rcc/qrc_sims_app_raw_qml_0.cpp.o
+.PHONY : build/.qt/rcc/qrc_sims_app_raw_qml_0.cpp.o
 
-SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.i: SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.i
-.PHONY : SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.i
+build/.qt/rcc/qrc_sims_app_raw_qml_0.i: build/.qt/rcc/qrc_sims_app_raw_qml_0.cpp.i
+.PHONY : build/.qt/rcc/qrc_sims_app_raw_qml_0.i
 
 # target to preprocess a source file
-SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.i
-.PHONY : SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.i
+build/.qt/rcc/qrc_sims_app_raw_qml_0.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.qt/rcc/qrc_sims_app_raw_qml_0.cpp.i
+.PHONY : build/.qt/rcc/qrc_sims_app_raw_qml_0.cpp.i
 
-SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.s: SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.s
-.PHONY : SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.s
+build/.qt/rcc/qrc_sims_app_raw_qml_0.s: build/.qt/rcc/qrc_sims_app_raw_qml_0.cpp.s
+.PHONY : build/.qt/rcc/qrc_sims_app_raw_qml_0.s
 
 # target to generate assembly for a file
-SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.s
-.PHONY : SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.s
+build/.qt/rcc/qrc_sims_app_raw_qml_0.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.qt/rcc/qrc_sims_app_raw_qml_0.cpp.s
+.PHONY : build/.qt/rcc/qrc_sims_app_raw_qml_0.cpp.s
 
-SIMS_autogen/mocs_compilation.o: SIMS_autogen/mocs_compilation.cpp.o
-.PHONY : SIMS_autogen/mocs_compilation.o
+build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.o: build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.o
 
 # target to build an object file
-SIMS_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.o
-.PHONY : SIMS_autogen/mocs_compilation.cpp.o
+build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.cpp.o
 
-SIMS_autogen/mocs_compilation.i: SIMS_autogen/mocs_compilation.cpp.i
-.PHONY : SIMS_autogen/mocs_compilation.i
+build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.i: build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.i
 
 # target to preprocess a source file
-SIMS_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.i
-.PHONY : SIMS_autogen/mocs_compilation.cpp.i
+build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.cpp.i
 
-SIMS_autogen/mocs_compilation.s: SIMS_autogen/mocs_compilation.cpp.s
-.PHONY : SIMS_autogen/mocs_compilation.s
+build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.s: build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.s
 
 # target to generate assembly for a file
-SIMS_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/SIMS_autogen/mocs_compilation.cpp.s
-.PHONY : SIMS_autogen/mocs_compilation.cpp.s
+build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.cpp.s
+
+build/.rcc/qmlcache/sims_app_qml/create_batches_qml.o: build/.rcc/qmlcache/sims_app_qml/create_batches_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/create_batches_qml.o
+
+# target to build an object file
+build/.rcc/qmlcache/sims_app_qml/create_batches_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/create_batches_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/create_batches_qml.cpp.o
+
+build/.rcc/qmlcache/sims_app_qml/create_batches_qml.i: build/.rcc/qmlcache/sims_app_qml/create_batches_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/create_batches_qml.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/sims_app_qml/create_batches_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/create_batches_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/create_batches_qml.cpp.i
+
+build/.rcc/qmlcache/sims_app_qml/create_batches_qml.s: build/.rcc/qmlcache/sims_app_qml/create_batches_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/create_batches_qml.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/sims_app_qml/create_batches_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/create_batches_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/create_batches_qml.cpp.s
+
+build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.o: build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.o
+
+# target to build an object file
+build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.cpp.o
+
+build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.i: build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.cpp.i
+
+build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.s: build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.cpp.s
+
+build/.rcc/qmlcache/sims_app_qml/login_screen_qml.o: build/.rcc/qmlcache/sims_app_qml/login_screen_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/login_screen_qml.o
+
+# target to build an object file
+build/.rcc/qmlcache/sims_app_qml/login_screen_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/login_screen_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/login_screen_qml.cpp.o
+
+build/.rcc/qmlcache/sims_app_qml/login_screen_qml.i: build/.rcc/qmlcache/sims_app_qml/login_screen_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/login_screen_qml.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/sims_app_qml/login_screen_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/login_screen_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/login_screen_qml.cpp.i
+
+build/.rcc/qmlcache/sims_app_qml/login_screen_qml.s: build/.rcc/qmlcache/sims_app_qml/login_screen_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/login_screen_qml.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/sims_app_qml/login_screen_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/login_screen_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/login_screen_qml.cpp.s
+
+build/.rcc/qmlcache/sims_app_qml/main_qml.o: build/.rcc/qmlcache/sims_app_qml/main_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/main_qml.o
+
+# target to build an object file
+build/.rcc/qmlcache/sims_app_qml/main_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/main_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/main_qml.cpp.o
+
+build/.rcc/qmlcache/sims_app_qml/main_qml.i: build/.rcc/qmlcache/sims_app_qml/main_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/main_qml.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/sims_app_qml/main_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/main_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/main_qml.cpp.i
+
+build/.rcc/qmlcache/sims_app_qml/main_qml.s: build/.rcc/qmlcache/sims_app_qml/main_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/main_qml.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/sims_app_qml/main_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/main_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/main_qml.cpp.s
+
+build/.rcc/qmlcache/sims_app_qml/main_window_qml.o: build/.rcc/qmlcache/sims_app_qml/main_window_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/main_window_qml.o
+
+# target to build an object file
+build/.rcc/qmlcache/sims_app_qml/main_window_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/main_window_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/main_window_qml.cpp.o
+
+build/.rcc/qmlcache/sims_app_qml/main_window_qml.i: build/.rcc/qmlcache/sims_app_qml/main_window_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/main_window_qml.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/sims_app_qml/main_window_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/main_window_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/main_window_qml.cpp.i
+
+build/.rcc/qmlcache/sims_app_qml/main_window_qml.s: build/.rcc/qmlcache/sims_app_qml/main_window_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/main_window_qml.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/sims_app_qml/main_window_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/main_window_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/main_window_qml.cpp.s
+
+build/.rcc/qmlcache/sims_app_qml/patient_details_qml.o: build/.rcc/qmlcache/sims_app_qml/patient_details_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/patient_details_qml.o
+
+# target to build an object file
+build/.rcc/qmlcache/sims_app_qml/patient_details_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/patient_details_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/patient_details_qml.cpp.o
+
+build/.rcc/qmlcache/sims_app_qml/patient_details_qml.i: build/.rcc/qmlcache/sims_app_qml/patient_details_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/patient_details_qml.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/sims_app_qml/patient_details_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/patient_details_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/patient_details_qml.cpp.i
+
+build/.rcc/qmlcache/sims_app_qml/patient_details_qml.s: build/.rcc/qmlcache/sims_app_qml/patient_details_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/patient_details_qml.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/sims_app_qml/patient_details_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/patient_details_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/patient_details_qml.cpp.s
+
+build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.o: build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.o
+
+# target to build an object file
+build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.cpp.o
+
+build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.i: build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.cpp.i
+
+build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.s: build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.cpp.s
+
+build/.rcc/qmlcache/sims_app_qmlcache_loader.o: build/.rcc/qmlcache/sims_app_qmlcache_loader.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qmlcache_loader.o
+
+# target to build an object file
+build/.rcc/qmlcache/sims_app_qmlcache_loader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qmlcache_loader.cpp.o
+.PHONY : build/.rcc/qmlcache/sims_app_qmlcache_loader.cpp.o
+
+build/.rcc/qmlcache/sims_app_qmlcache_loader.i: build/.rcc/qmlcache/sims_app_qmlcache_loader.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qmlcache_loader.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/sims_app_qmlcache_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qmlcache_loader.cpp.i
+.PHONY : build/.rcc/qmlcache/sims_app_qmlcache_loader.cpp.i
+
+build/.rcc/qmlcache/sims_app_qmlcache_loader.s: build/.rcc/qmlcache/sims_app_qmlcache_loader.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qmlcache_loader.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/sims_app_qmlcache_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/build/.rcc/qmlcache/sims_app_qmlcache_loader.cpp.s
+.PHONY : build/.rcc/qmlcache/sims_app_qmlcache_loader.cpp.s
 
 cpp/DBManager.o: cpp/DBManager.cpp.o
 .PHONY : cpp/DBManager.o
 
 # target to build an object file
 cpp/DBManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/DBManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/DBManager.cpp.o
 .PHONY : cpp/DBManager.cpp.o
 
 cpp/DBManager.i: cpp/DBManager.cpp.i
@@ -240,7 +602,7 @@ cpp/DBManager.i: cpp/DBManager.cpp.i
 
 # target to preprocess a source file
 cpp/DBManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/DBManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/DBManager.cpp.i
 .PHONY : cpp/DBManager.cpp.i
 
 cpp/DBManager.s: cpp/DBManager.cpp.s
@@ -248,7 +610,7 @@ cpp/DBManager.s: cpp/DBManager.cpp.s
 
 # target to generate assembly for a file
 cpp/DBManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/DBManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/DBManager.cpp.s
 .PHONY : cpp/DBManager.cpp.s
 
 cpp/add_items_into_inventory.o: cpp/add_items_into_inventory.cpp.o
@@ -256,7 +618,7 @@ cpp/add_items_into_inventory.o: cpp/add_items_into_inventory.cpp.o
 
 # target to build an object file
 cpp/add_items_into_inventory.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/add_items_into_inventory.cpp.o
 .PHONY : cpp/add_items_into_inventory.cpp.o
 
 cpp/add_items_into_inventory.i: cpp/add_items_into_inventory.cpp.i
@@ -264,7 +626,7 @@ cpp/add_items_into_inventory.i: cpp/add_items_into_inventory.cpp.i
 
 # target to preprocess a source file
 cpp/add_items_into_inventory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/add_items_into_inventory.cpp.i
 .PHONY : cpp/add_items_into_inventory.cpp.i
 
 cpp/add_items_into_inventory.s: cpp/add_items_into_inventory.cpp.s
@@ -272,7 +634,7 @@ cpp/add_items_into_inventory.s: cpp/add_items_into_inventory.cpp.s
 
 # target to generate assembly for a file
 cpp/add_items_into_inventory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/add_items_into_inventory.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/add_items_into_inventory.cpp.s
 .PHONY : cpp/add_items_into_inventory.cpp.s
 
 cpp/add_items_into_the_barcode.o: cpp/add_items_into_the_barcode.cpp.o
@@ -280,7 +642,7 @@ cpp/add_items_into_the_barcode.o: cpp/add_items_into_the_barcode.cpp.o
 
 # target to build an object file
 cpp/add_items_into_the_barcode.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/add_items_into_the_barcode.cpp.o
 .PHONY : cpp/add_items_into_the_barcode.cpp.o
 
 cpp/add_items_into_the_barcode.i: cpp/add_items_into_the_barcode.cpp.i
@@ -288,7 +650,7 @@ cpp/add_items_into_the_barcode.i: cpp/add_items_into_the_barcode.cpp.i
 
 # target to preprocess a source file
 cpp/add_items_into_the_barcode.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/add_items_into_the_barcode.cpp.i
 .PHONY : cpp/add_items_into_the_barcode.cpp.i
 
 cpp/add_items_into_the_barcode.s: cpp/add_items_into_the_barcode.cpp.s
@@ -296,7 +658,7 @@ cpp/add_items_into_the_barcode.s: cpp/add_items_into_the_barcode.cpp.s
 
 # target to generate assembly for a file
 cpp/add_items_into_the_barcode.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/add_items_into_the_barcode.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/add_items_into_the_barcode.cpp.s
 .PHONY : cpp/add_items_into_the_barcode.cpp.s
 
 cpp/control_my_stack.o: cpp/control_my_stack.cpp.o
@@ -304,7 +666,7 @@ cpp/control_my_stack.o: cpp/control_my_stack.cpp.o
 
 # target to build an object file
 cpp/control_my_stack.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/control_my_stack.cpp.o
 .PHONY : cpp/control_my_stack.cpp.o
 
 cpp/control_my_stack.i: cpp/control_my_stack.cpp.i
@@ -312,7 +674,7 @@ cpp/control_my_stack.i: cpp/control_my_stack.cpp.i
 
 # target to preprocess a source file
 cpp/control_my_stack.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/control_my_stack.cpp.i
 .PHONY : cpp/control_my_stack.cpp.i
 
 cpp/control_my_stack.s: cpp/control_my_stack.cpp.s
@@ -320,7 +682,7 @@ cpp/control_my_stack.s: cpp/control_my_stack.cpp.s
 
 # target to generate assembly for a file
 cpp/control_my_stack.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/control_my_stack.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/control_my_stack.cpp.s
 .PHONY : cpp/control_my_stack.cpp.s
 
 cpp/create_a_barcode.o: cpp/create_a_barcode.cpp.o
@@ -328,7 +690,7 @@ cpp/create_a_barcode.o: cpp/create_a_barcode.cpp.o
 
 # target to build an object file
 cpp/create_a_barcode.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/create_a_barcode.cpp.o
 .PHONY : cpp/create_a_barcode.cpp.o
 
 cpp/create_a_barcode.i: cpp/create_a_barcode.cpp.i
@@ -336,7 +698,7 @@ cpp/create_a_barcode.i: cpp/create_a_barcode.cpp.i
 
 # target to preprocess a source file
 cpp/create_a_barcode.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/create_a_barcode.cpp.i
 .PHONY : cpp/create_a_barcode.cpp.i
 
 cpp/create_a_barcode.s: cpp/create_a_barcode.cpp.s
@@ -344,15 +706,39 @@ cpp/create_a_barcode.s: cpp/create_a_barcode.cpp.s
 
 # target to generate assembly for a file
 cpp/create_a_barcode.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/create_a_barcode.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/create_a_barcode.cpp.s
 .PHONY : cpp/create_a_barcode.cpp.s
+
+cpp/end_autoclaving.o: cpp/end_autoclaving.cpp.o
+.PHONY : cpp/end_autoclaving.o
+
+# target to build an object file
+cpp/end_autoclaving.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/end_autoclaving.cpp.o
+.PHONY : cpp/end_autoclaving.cpp.o
+
+cpp/end_autoclaving.i: cpp/end_autoclaving.cpp.i
+.PHONY : cpp/end_autoclaving.i
+
+# target to preprocess a source file
+cpp/end_autoclaving.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/end_autoclaving.cpp.i
+.PHONY : cpp/end_autoclaving.cpp.i
+
+cpp/end_autoclaving.s: cpp/end_autoclaving.cpp.s
+.PHONY : cpp/end_autoclaving.s
+
+# target to generate assembly for a file
+cpp/end_autoclaving.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/end_autoclaving.cpp.s
+.PHONY : cpp/end_autoclaving.cpp.s
 
 cpp/login_screen.o: cpp/login_screen.cpp.o
 .PHONY : cpp/login_screen.o
 
 # target to build an object file
 cpp/login_screen.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/login_screen.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/login_screen.cpp.o
 .PHONY : cpp/login_screen.cpp.o
 
 cpp/login_screen.i: cpp/login_screen.cpp.i
@@ -360,7 +746,7 @@ cpp/login_screen.i: cpp/login_screen.cpp.i
 
 # target to preprocess a source file
 cpp/login_screen.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/login_screen.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/login_screen.cpp.i
 .PHONY : cpp/login_screen.cpp.i
 
 cpp/login_screen.s: cpp/login_screen.cpp.s
@@ -368,7 +754,7 @@ cpp/login_screen.s: cpp/login_screen.cpp.s
 
 # target to generate assembly for a file
 cpp/login_screen.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/login_screen.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/login_screen.cpp.s
 .PHONY : cpp/login_screen.cpp.s
 
 cpp/main.o: cpp/main.cpp.o
@@ -376,7 +762,7 @@ cpp/main.o: cpp/main.cpp.o
 
 # target to build an object file
 cpp/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/main.cpp.o
 .PHONY : cpp/main.cpp.o
 
 cpp/main.i: cpp/main.cpp.i
@@ -384,7 +770,7 @@ cpp/main.i: cpp/main.cpp.i
 
 # target to preprocess a source file
 cpp/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/main.cpp.i
 .PHONY : cpp/main.cpp.i
 
 cpp/main.s: cpp/main.cpp.s
@@ -392,7 +778,7 @@ cpp/main.s: cpp/main.cpp.s
 
 # target to generate assembly for a file
 cpp/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/main.cpp.s
 .PHONY : cpp/main.cpp.s
 
 cpp/main_window.o: cpp/main_window.cpp.o
@@ -400,7 +786,7 @@ cpp/main_window.o: cpp/main_window.cpp.o
 
 # target to build an object file
 cpp/main_window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/main_window.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/main_window.cpp.o
 .PHONY : cpp/main_window.cpp.o
 
 cpp/main_window.i: cpp/main_window.cpp.i
@@ -408,7 +794,7 @@ cpp/main_window.i: cpp/main_window.cpp.i
 
 # target to preprocess a source file
 cpp/main_window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/main_window.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/main_window.cpp.i
 .PHONY : cpp/main_window.cpp.i
 
 cpp/main_window.s: cpp/main_window.cpp.s
@@ -416,7 +802,7 @@ cpp/main_window.s: cpp/main_window.cpp.s
 
 # target to generate assembly for a file
 cpp/main_window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/main_window.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/main_window.cpp.s
 .PHONY : cpp/main_window.cpp.s
 
 cpp/pick_a_set_widget.o: cpp/pick_a_set_widget.cpp.o
@@ -424,7 +810,7 @@ cpp/pick_a_set_widget.o: cpp/pick_a_set_widget.cpp.o
 
 # target to build an object file
 cpp/pick_a_set_widget.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/pick_a_set_widget.cpp.o
 .PHONY : cpp/pick_a_set_widget.cpp.o
 
 cpp/pick_a_set_widget.i: cpp/pick_a_set_widget.cpp.i
@@ -432,7 +818,7 @@ cpp/pick_a_set_widget.i: cpp/pick_a_set_widget.cpp.i
 
 # target to preprocess a source file
 cpp/pick_a_set_widget.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/pick_a_set_widget.cpp.i
 .PHONY : cpp/pick_a_set_widget.cpp.i
 
 cpp/pick_a_set_widget.s: cpp/pick_a_set_widget.cpp.s
@@ -440,15 +826,183 @@ cpp/pick_a_set_widget.s: cpp/pick_a_set_widget.cpp.s
 
 # target to generate assembly for a file
 cpp/pick_a_set_widget.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/pick_a_set_widget.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/pick_a_set_widget.cpp.s
 .PHONY : cpp/pick_a_set_widget.cpp.s
+
+cpp/post_decontamination.o: cpp/post_decontamination.cpp.o
+.PHONY : cpp/post_decontamination.o
+
+# target to build an object file
+cpp/post_decontamination.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/post_decontamination.cpp.o
+.PHONY : cpp/post_decontamination.cpp.o
+
+cpp/post_decontamination.i: cpp/post_decontamination.cpp.i
+.PHONY : cpp/post_decontamination.i
+
+# target to preprocess a source file
+cpp/post_decontamination.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/post_decontamination.cpp.i
+.PHONY : cpp/post_decontamination.cpp.i
+
+cpp/post_decontamination.s: cpp/post_decontamination.cpp.s
+.PHONY : cpp/post_decontamination.s
+
+# target to generate assembly for a file
+cpp/post_decontamination.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/post_decontamination.cpp.s
+.PHONY : cpp/post_decontamination.cpp.s
+
+cpp/post_packaging.o: cpp/post_packaging.cpp.o
+.PHONY : cpp/post_packaging.o
+
+# target to build an object file
+cpp/post_packaging.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/post_packaging.cpp.o
+.PHONY : cpp/post_packaging.cpp.o
+
+cpp/post_packaging.i: cpp/post_packaging.cpp.i
+.PHONY : cpp/post_packaging.i
+
+# target to preprocess a source file
+cpp/post_packaging.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/post_packaging.cpp.i
+.PHONY : cpp/post_packaging.cpp.i
+
+cpp/post_packaging.s: cpp/post_packaging.cpp.s
+.PHONY : cpp/post_packaging.s
+
+# target to generate assembly for a file
+cpp/post_packaging.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/post_packaging.cpp.s
+.PHONY : cpp/post_packaging.cpp.s
+
+cpp/post_store.o: cpp/post_store.cpp.o
+.PHONY : cpp/post_store.o
+
+# target to build an object file
+cpp/post_store.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/post_store.cpp.o
+.PHONY : cpp/post_store.cpp.o
+
+cpp/post_store.i: cpp/post_store.cpp.i
+.PHONY : cpp/post_store.i
+
+# target to preprocess a source file
+cpp/post_store.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/post_store.cpp.i
+.PHONY : cpp/post_store.cpp.i
+
+cpp/post_store.s: cpp/post_store.cpp.s
+.PHONY : cpp/post_store.s
+
+# target to generate assembly for a file
+cpp/post_store.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/post_store.cpp.s
+.PHONY : cpp/post_store.cpp.s
+
+cpp/post_theatre.o: cpp/post_theatre.cpp.o
+.PHONY : cpp/post_theatre.o
+
+# target to build an object file
+cpp/post_theatre.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/post_theatre.cpp.o
+.PHONY : cpp/post_theatre.cpp.o
+
+cpp/post_theatre.i: cpp/post_theatre.cpp.i
+.PHONY : cpp/post_theatre.i
+
+# target to preprocess a source file
+cpp/post_theatre.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/post_theatre.cpp.i
+.PHONY : cpp/post_theatre.cpp.i
+
+cpp/post_theatre.s: cpp/post_theatre.cpp.s
+.PHONY : cpp/post_theatre.s
+
+# target to generate assembly for a file
+cpp/post_theatre.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/post_theatre.cpp.s
+.PHONY : cpp/post_theatre.cpp.s
+
+cpp/pre_decontamination.o: cpp/pre_decontamination.cpp.o
+.PHONY : cpp/pre_decontamination.o
+
+# target to build an object file
+cpp/pre_decontamination.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/pre_decontamination.cpp.o
+.PHONY : cpp/pre_decontamination.cpp.o
+
+cpp/pre_decontamination.i: cpp/pre_decontamination.cpp.i
+.PHONY : cpp/pre_decontamination.i
+
+# target to preprocess a source file
+cpp/pre_decontamination.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/pre_decontamination.cpp.i
+.PHONY : cpp/pre_decontamination.cpp.i
+
+cpp/pre_decontamination.s: cpp/pre_decontamination.cpp.s
+.PHONY : cpp/pre_decontamination.s
+
+# target to generate assembly for a file
+cpp/pre_decontamination.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/pre_decontamination.cpp.s
+.PHONY : cpp/pre_decontamination.cpp.s
+
+cpp/pre_packaging.o: cpp/pre_packaging.cpp.o
+.PHONY : cpp/pre_packaging.o
+
+# target to build an object file
+cpp/pre_packaging.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/pre_packaging.cpp.o
+.PHONY : cpp/pre_packaging.cpp.o
+
+cpp/pre_packaging.i: cpp/pre_packaging.cpp.i
+.PHONY : cpp/pre_packaging.i
+
+# target to preprocess a source file
+cpp/pre_packaging.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/pre_packaging.cpp.i
+.PHONY : cpp/pre_packaging.cpp.i
+
+cpp/pre_packaging.s: cpp/pre_packaging.cpp.s
+.PHONY : cpp/pre_packaging.s
+
+# target to generate assembly for a file
+cpp/pre_packaging.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/pre_packaging.cpp.s
+.PHONY : cpp/pre_packaging.cpp.s
+
+cpp/pre_theatre.o: cpp/pre_theatre.cpp.o
+.PHONY : cpp/pre_theatre.o
+
+# target to build an object file
+cpp/pre_theatre.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/pre_theatre.cpp.o
+.PHONY : cpp/pre_theatre.cpp.o
+
+cpp/pre_theatre.i: cpp/pre_theatre.cpp.i
+.PHONY : cpp/pre_theatre.i
+
+# target to preprocess a source file
+cpp/pre_theatre.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/pre_theatre.cpp.i
+.PHONY : cpp/pre_theatre.cpp.i
+
+cpp/pre_theatre.s: cpp/pre_theatre.cpp.s
+.PHONY : cpp/pre_theatre.s
+
+# target to generate assembly for a file
+cpp/pre_theatre.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/pre_theatre.cpp.s
+.PHONY : cpp/pre_theatre.cpp.s
 
 cpp/select_the_surgery.o: cpp/select_the_surgery.cpp.o
 .PHONY : cpp/select_the_surgery.o
 
 # target to build an object file
 cpp/select_the_surgery.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/select_the_surgery.cpp.o
 .PHONY : cpp/select_the_surgery.cpp.o
 
 cpp/select_the_surgery.i: cpp/select_the_surgery.cpp.i
@@ -456,7 +1010,7 @@ cpp/select_the_surgery.i: cpp/select_the_surgery.cpp.i
 
 # target to preprocess a source file
 cpp/select_the_surgery.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/select_the_surgery.cpp.i
 .PHONY : cpp/select_the_surgery.cpp.i
 
 cpp/select_the_surgery.s: cpp/select_the_surgery.cpp.s
@@ -464,7 +1018,7 @@ cpp/select_the_surgery.s: cpp/select_the_surgery.cpp.s
 
 # target to generate assembly for a file
 cpp/select_the_surgery.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/select_the_surgery.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/select_the_surgery.cpp.s
 .PHONY : cpp/select_the_surgery.cpp.s
 
 cpp/view_created_batches.o: cpp/view_created_batches.cpp.o
@@ -472,7 +1026,7 @@ cpp/view_created_batches.o: cpp/view_created_batches.cpp.o
 
 # target to build an object file
 cpp/view_created_batches.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/view_created_batches.cpp.o
 .PHONY : cpp/view_created_batches.cpp.o
 
 cpp/view_created_batches.i: cpp/view_created_batches.cpp.i
@@ -480,7 +1034,7 @@ cpp/view_created_batches.i: cpp/view_created_batches.cpp.i
 
 # target to preprocess a source file
 cpp/view_created_batches.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/view_created_batches.cpp.i
 .PHONY : cpp/view_created_batches.cpp.i
 
 cpp/view_created_batches.s: cpp/view_created_batches.cpp.s
@@ -488,7 +1042,7 @@ cpp/view_created_batches.s: cpp/view_created_batches.cpp.s
 
 # target to generate assembly for a file
 cpp/view_created_batches.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/view_created_batches.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/view_created_batches.cpp.s
 .PHONY : cpp/view_created_batches.cpp.s
 
 cpp/view_the_inventory.o: cpp/view_the_inventory.cpp.o
@@ -496,7 +1050,7 @@ cpp/view_the_inventory.o: cpp/view_the_inventory.cpp.o
 
 # target to build an object file
 cpp/view_the_inventory.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/view_the_inventory.cpp.o
 .PHONY : cpp/view_the_inventory.cpp.o
 
 cpp/view_the_inventory.i: cpp/view_the_inventory.cpp.i
@@ -504,7 +1058,7 @@ cpp/view_the_inventory.i: cpp/view_the_inventory.cpp.i
 
 # target to preprocess a source file
 cpp/view_the_inventory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/view_the_inventory.cpp.i
 .PHONY : cpp/view_the_inventory.cpp.i
 
 cpp/view_the_inventory.s: cpp/view_the_inventory.cpp.s
@@ -512,7 +1066,7 @@ cpp/view_the_inventory.s: cpp/view_the_inventory.cpp.s
 
 # target to generate assembly for a file
 cpp/view_the_inventory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/view_the_inventory.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/view_the_inventory.cpp.s
 .PHONY : cpp/view_the_inventory.cpp.s
 
 cpp/welcome-screen.o: cpp/welcome-screen.cpp.o
@@ -520,7 +1074,7 @@ cpp/welcome-screen.o: cpp/welcome-screen.cpp.o
 
 # target to build an object file
 cpp/welcome-screen.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/welcome-screen.cpp.o
 .PHONY : cpp/welcome-screen.cpp.o
 
 cpp/welcome-screen.i: cpp/welcome-screen.cpp.i
@@ -528,7 +1082,7 @@ cpp/welcome-screen.i: cpp/welcome-screen.cpp.i
 
 # target to preprocess a source file
 cpp/welcome-screen.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/welcome-screen.cpp.i
 .PHONY : cpp/welcome-screen.cpp.i
 
 cpp/welcome-screen.s: cpp/welcome-screen.cpp.s
@@ -536,8 +1090,104 @@ cpp/welcome-screen.s: cpp/welcome-screen.cpp.s
 
 # target to generate assembly for a file
 cpp/welcome-screen.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIMS.dir/build.make CMakeFiles/SIMS.dir/cpp/welcome-screen.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/cpp/welcome-screen.cpp.s
 .PHONY : cpp/welcome-screen.cpp.s
+
+sims_app_autogen/3YJK5W5UP7/qrc_login.o: sims_app_autogen/3YJK5W5UP7/qrc_login.cpp.o
+.PHONY : sims_app_autogen/3YJK5W5UP7/qrc_login.o
+
+# target to build an object file
+sims_app_autogen/3YJK5W5UP7/qrc_login.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/sims_app_autogen/3YJK5W5UP7/qrc_login.cpp.o
+.PHONY : sims_app_autogen/3YJK5W5UP7/qrc_login.cpp.o
+
+sims_app_autogen/3YJK5W5UP7/qrc_login.i: sims_app_autogen/3YJK5W5UP7/qrc_login.cpp.i
+.PHONY : sims_app_autogen/3YJK5W5UP7/qrc_login.i
+
+# target to preprocess a source file
+sims_app_autogen/3YJK5W5UP7/qrc_login.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/sims_app_autogen/3YJK5W5UP7/qrc_login.cpp.i
+.PHONY : sims_app_autogen/3YJK5W5UP7/qrc_login.cpp.i
+
+sims_app_autogen/3YJK5W5UP7/qrc_login.s: sims_app_autogen/3YJK5W5UP7/qrc_login.cpp.s
+.PHONY : sims_app_autogen/3YJK5W5UP7/qrc_login.s
+
+# target to generate assembly for a file
+sims_app_autogen/3YJK5W5UP7/qrc_login.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/sims_app_autogen/3YJK5W5UP7/qrc_login.cpp.s
+.PHONY : sims_app_autogen/3YJK5W5UP7/qrc_login.cpp.s
+
+sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.o: sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o
+.PHONY : sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.o
+
+# target to build an object file
+sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o
+.PHONY : sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.o
+
+sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.i: sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.i
+.PHONY : sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.i
+
+# target to preprocess a source file
+sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.i
+.PHONY : sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.i
+
+sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.s: sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.s
+.PHONY : sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.s
+
+# target to generate assembly for a file
+sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.s
+.PHONY : sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.cpp.s
+
+sims_app_autogen/mocs_compilation.o: sims_app_autogen/mocs_compilation.cpp.o
+.PHONY : sims_app_autogen/mocs_compilation.o
+
+# target to build an object file
+sims_app_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/sims_app_autogen/mocs_compilation.cpp.o
+.PHONY : sims_app_autogen/mocs_compilation.cpp.o
+
+sims_app_autogen/mocs_compilation.i: sims_app_autogen/mocs_compilation.cpp.i
+.PHONY : sims_app_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+sims_app_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/sims_app_autogen/mocs_compilation.cpp.i
+.PHONY : sims_app_autogen/mocs_compilation.cpp.i
+
+sims_app_autogen/mocs_compilation.s: sims_app_autogen/mocs_compilation.cpp.s
+.PHONY : sims_app_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+sims_app_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/sims_app_autogen/mocs_compilation.cpp.s
+.PHONY : sims_app_autogen/mocs_compilation.cpp.s
+
+sims_app_qmltyperegistrations.o: sims_app_qmltyperegistrations.cpp.o
+.PHONY : sims_app_qmltyperegistrations.o
+
+# target to build an object file
+sims_app_qmltyperegistrations.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/sims_app_qmltyperegistrations.cpp.o
+.PHONY : sims_app_qmltyperegistrations.cpp.o
+
+sims_app_qmltyperegistrations.i: sims_app_qmltyperegistrations.cpp.i
+.PHONY : sims_app_qmltyperegistrations.i
+
+# target to preprocess a source file
+sims_app_qmltyperegistrations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/sims_app_qmltyperegistrations.cpp.i
+.PHONY : sims_app_qmltyperegistrations.cpp.i
+
+sims_app_qmltyperegistrations.s: sims_app_qmltyperegistrations.cpp.s
+.PHONY : sims_app_qmltyperegistrations.s
+
+# target to generate assembly for a file
+sims_app_qmltyperegistrations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sims_app.dir/build.make CMakeFiles/sims_app.dir/sims_app_qmltyperegistrations.cpp.s
+.PHONY : sims_app_qmltyperegistrations.cpp.s
 
 # Help Target
 help:
@@ -547,18 +1197,55 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... SIMS_autogen"
-	@echo "... SIMS_autogen_timestamp_deps"
-	@echo "... SIMS"
-	@echo "... SIMS_autogen/3YJK5W5UP7/qrc_login.o"
-	@echo "... SIMS_autogen/3YJK5W5UP7/qrc_login.i"
-	@echo "... SIMS_autogen/3YJK5W5UP7/qrc_login.s"
-	@echo "... SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.o"
-	@echo "... SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.i"
-	@echo "... SIMS_autogen/3YJK5W5UP7/qrc_welcome_screen.s"
-	@echo "... SIMS_autogen/mocs_compilation.o"
-	@echo "... SIMS_autogen/mocs_compilation.i"
-	@echo "... SIMS_autogen/mocs_compilation.s"
+	@echo "... all_aotstats"
+	@echo "... all_qmllint"
+	@echo "... all_qmllint_json"
+	@echo "... all_qmllint_module"
+	@echo "... all_qmltyperegistrations"
+	@echo "... module_sims_app_aotstats_target"
+	@echo "... sims_app_autogen"
+	@echo "... sims_app_autogen_timestamp_deps"
+	@echo "... sims_app_copy_qml"
+	@echo "... sims_app_copy_res"
+	@echo "... sims_app_other_files"
+	@echo "... sims_app_qmllint"
+	@echo "... sims_app_qmllint_json"
+	@echo "... sims_app_qmllint_module"
+	@echo "... sims_app_qmltyperegistration"
+	@echo "... sims_app"
+	@echo "... build/.qt/rcc/qrc_qmake_SIMS.o"
+	@echo "... build/.qt/rcc/qrc_qmake_SIMS.i"
+	@echo "... build/.qt/rcc/qrc_qmake_SIMS.s"
+	@echo "... build/.qt/rcc/qrc_sims_app_raw_qml_0.o"
+	@echo "... build/.qt/rcc/qrc_sims_app_raw_qml_0.i"
+	@echo "... build/.qt/rcc/qrc_sims_app_raw_qml_0.s"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.o"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.i"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/add_items_into_batch_qml.s"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/create_batches_qml.o"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/create_batches_qml.i"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/create_batches_qml.s"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.o"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.i"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/display_batch_n_patient_qml.s"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/login_screen_qml.o"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/login_screen_qml.i"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/login_screen_qml.s"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/main_qml.o"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/main_qml.i"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/main_qml.s"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/main_window_qml.o"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/main_window_qml.i"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/main_window_qml.s"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/patient_details_qml.o"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/patient_details_qml.i"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/patient_details_qml.s"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.o"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.i"
+	@echo "... build/.rcc/qmlcache/sims_app_qml/splash_screen_qml.s"
+	@echo "... build/.rcc/qmlcache/sims_app_qmlcache_loader.o"
+	@echo "... build/.rcc/qmlcache/sims_app_qmlcache_loader.i"
+	@echo "... build/.rcc/qmlcache/sims_app_qmlcache_loader.s"
 	@echo "... cpp/DBManager.o"
 	@echo "... cpp/DBManager.i"
 	@echo "... cpp/DBManager.s"
@@ -574,6 +1261,9 @@ help:
 	@echo "... cpp/create_a_barcode.o"
 	@echo "... cpp/create_a_barcode.i"
 	@echo "... cpp/create_a_barcode.s"
+	@echo "... cpp/end_autoclaving.o"
+	@echo "... cpp/end_autoclaving.i"
+	@echo "... cpp/end_autoclaving.s"
 	@echo "... cpp/login_screen.o"
 	@echo "... cpp/login_screen.i"
 	@echo "... cpp/login_screen.s"
@@ -586,6 +1276,27 @@ help:
 	@echo "... cpp/pick_a_set_widget.o"
 	@echo "... cpp/pick_a_set_widget.i"
 	@echo "... cpp/pick_a_set_widget.s"
+	@echo "... cpp/post_decontamination.o"
+	@echo "... cpp/post_decontamination.i"
+	@echo "... cpp/post_decontamination.s"
+	@echo "... cpp/post_packaging.o"
+	@echo "... cpp/post_packaging.i"
+	@echo "... cpp/post_packaging.s"
+	@echo "... cpp/post_store.o"
+	@echo "... cpp/post_store.i"
+	@echo "... cpp/post_store.s"
+	@echo "... cpp/post_theatre.o"
+	@echo "... cpp/post_theatre.i"
+	@echo "... cpp/post_theatre.s"
+	@echo "... cpp/pre_decontamination.o"
+	@echo "... cpp/pre_decontamination.i"
+	@echo "... cpp/pre_decontamination.s"
+	@echo "... cpp/pre_packaging.o"
+	@echo "... cpp/pre_packaging.i"
+	@echo "... cpp/pre_packaging.s"
+	@echo "... cpp/pre_theatre.o"
+	@echo "... cpp/pre_theatre.i"
+	@echo "... cpp/pre_theatre.s"
 	@echo "... cpp/select_the_surgery.o"
 	@echo "... cpp/select_the_surgery.i"
 	@echo "... cpp/select_the_surgery.s"
@@ -598,6 +1309,18 @@ help:
 	@echo "... cpp/welcome-screen.o"
 	@echo "... cpp/welcome-screen.i"
 	@echo "... cpp/welcome-screen.s"
+	@echo "... sims_app_autogen/3YJK5W5UP7/qrc_login.o"
+	@echo "... sims_app_autogen/3YJK5W5UP7/qrc_login.i"
+	@echo "... sims_app_autogen/3YJK5W5UP7/qrc_login.s"
+	@echo "... sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.o"
+	@echo "... sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.i"
+	@echo "... sims_app_autogen/3YJK5W5UP7/qrc_welcome_screen.s"
+	@echo "... sims_app_autogen/mocs_compilation.o"
+	@echo "... sims_app_autogen/mocs_compilation.i"
+	@echo "... sims_app_autogen/mocs_compilation.s"
+	@echo "... sims_app_qmltyperegistrations.o"
+	@echo "... sims_app_qmltyperegistrations.i"
+	@echo "... sims_app_qmltyperegistrations.s"
 .PHONY : help
 
 
@@ -609,6 +1332,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+	$(CMAKE_COMMAND) -P /media/ghostbyte/datadump/sims/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

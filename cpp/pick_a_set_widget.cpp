@@ -3,20 +3,11 @@
 #include <QDebug>
 
 
-pick_a_set_widget::pick_a_set_widget(
-                        open_source source,
-                        QString value,
-                        QWidget* parent) 
-                        : QWidget(parent),
-                          m_source(source),
-                          m_value(value) {
-
-    this->setObjectName("pick_a_set_widget");
-    ui.setupUi(this);
+pick_a_set_widget::pick_a_set_widget(QObject* parent) : QObject(parent){
 
     db = database_manager::instance().get_database();
 
-    load_data();
+    /*load_data();
     QString username = UserSession::getInstance().getCurrentUser();
     ui.issued_by_lineEdit->setText(username);
 
@@ -26,7 +17,7 @@ pick_a_set_widget::pick_a_set_widget(
 
     ui.theatre_name_comboBox->addItems({"Theatre A", "Theatre B", "Theatre C"});
 
-     setUp_selected_items_tableView();
+    setUp_selected_items_tableView();
 
     //focus on an input box when enter is pressed
     ui.patient_name_lineEdit->setFocus();
@@ -53,15 +44,16 @@ pick_a_set_widget::pick_a_set_widget(
     });
     connect(ui.plus_pushButton, &QPushButton::clicked, [this]{
         ui.done_pushButton->setFocus();
-    });
+    });*/
 }
-
+/*
 void pick_a_set_widget::load_data(){
     QSqlQuery query(db);
 
     if (m_source == from_create_a_barcode_widget) {
         query.prepare("SELECT type_of_surgery FROM created_batches WHERE batch_code = :code");
         query.bindValue(":code", m_value);
+        qDebug() << m_value;
 
         if (query.exec()) {
             if (query.next()) {
@@ -80,15 +72,16 @@ void pick_a_set_widget::load_data(){
         query.bindValue(":type_of_surgery", m_value);
         query.bindValue(":status", "complete");
         query.bindValue(":sterilised", true);
-    }
-    if (query.exec()) {
-        if (query.next()) {
-            QString batch_code = query.value("batch_code").toString();
-            ui.batch_code_lineEdit->setText(batch_code);
-            ui.type_of_surgery_lineEdit->setText(m_value);
+
+        if (query.exec()) {
+            if (query.next()) {
+                QString batch_code = query.value("batch_code").toString();
+                ui.batch_code_lineEdit->setText(batch_code);
+                ui.type_of_surgery_lineEdit->setText(m_value);
+            }
+        } else {
+            qDebug() << query.lastError().text();
         }
-    } else {
-        qDebug() << query.lastError().text();
     }
     
 }
@@ -217,20 +210,20 @@ void pick_a_set_widget::on_plus_pushButton_clicked() {
     transaction_started = true;
 
     /*fetch the text in batch_code_lineEdit, and db connection and pass it to the add_items_form class in add_items_into_barcode.h.*/
-    QString batch_code = ui.batch_code_lineEdit->text().trimmed();
-    add_items_Form *itemsinbarcode = new add_items_Form(batch_code, &db);
+    //QString batch_code = ui.batch_code_lineEdit->text().trimmed();
+    //add_items_Form *itemsinbarcode = new add_items_Form(batch_code, &db);
     
     //Delete this widget once it closes
-    itemsinbarcode->setAttribute(Qt::WA_DeleteOnClose);
+    //itemsinbarcode->setAttribute(Qt::WA_DeleteOnClose);
 
     /*connect the signal in add_items_into_barcode.h so signal items have been added.
     then setUp_selected_items_tableView will update the table with this data*/
-    connect(itemsinbarcode, &add_items_Form::items_added, 
-                        this, &pick_a_set_widget::setUp_selected_items_tableView);
-    itemsinbarcode->show();
-}
+    //connect(itemsinbarcode, &add_items_Form::items_added, 
+    //                    this, &pick_a_set_widget::setUp_selected_items_tableView);
+    //itemsinbarcode->show();
+//}*/
 
-void pick_a_set_widget::setUp_selected_items_tableView() {
+/*void pick_a_set_widget::setUp_selected_items_tableView() {
     QString batch_code = ui.batch_code_lineEdit->text().trimmed();
 
     QSqlQuery query(db);
@@ -275,4 +268,306 @@ void pick_a_set_widget::on_exit_pushButton_clicked(){
     }
 
     this->close();
+}*/
+
+QStringList pick_a_set_widget::getSurgeryTypes() {
+    QStringList surgery_types;
+
+    if (!db.open()) {
+        emit error_message("Database not open: " + db.lastError().text());
+        return surgery_types;
+    }
+
+    QSqlQuery query(db);
+
+    query.prepare("SELECT DISTINCT type_of_surgery FROM created_batches WHERE status = :status AND sterilised = :sterilised");
+    query.bindValue(":status", "complete");
+    query.bindValue(":sterilised", true);
+    if (!query.exec()) {
+        emit error_message("Failed to load surgery types: " + query.lastError().text());
+        return surgery_types;
+    }
+
+    while (query.next()) {
+            QString surgery = query.value("type_of_surgery").toString();
+            if (!surgery.isEmpty()) {
+                surgery_types.append(surgery);
+            }
+        }
+
+    return surgery_types;
+}
+
+QVariantMap pick_a_set_widget::select_batch(const QString &surgery_type) {
+    QVariantMap result;
+
+    result["success"] = false;
+
+    QString selected_surgery = surgery_type.trimmed();
+
+    if (selected_surgery.isEmpty()) {
+        emit warning_message("Please select a surgey type before proceeding.");
+        return result;
+    }
+
+    if (!db.isOpen()) {
+        if (!db.open()) {
+            emit error_message("Database not open: " + db.lastError().text());
+            return result;
+        }
+    }
+
+    QSqlQuery query(db);
+
+    query.prepare("SELECT batch_code FROM created_batches WHERE type_of_surgery = :type_of_surgery AND status = :status AND sterilised = :sterilised");
+    query.bindValue(":type_of_surgery", selected_surgery);
+    query.bindValue(":status", "complete");
+    query.bindValue(":sterilised", true);
+    if (!query.exec()) {
+        emit error_message("Failed to find the batch: " + query.lastError().text());
+        return result;
+    }
+
+    if (!query.next()) {
+        emit warning_message("No completed and sterilised batch is available for this surgery.");
+        return result;
+    }
+
+    QString batch_code = query.value("batch_code").toString();
+
+    if (!db.transaction()) {
+        emit error_message("Failed to start a database transaction: " + db.lastError().text());
+        return result;
+    }
+
+    transaction_started = true;
+
+    QSqlQuery items_query(db);
+
+    items_query.prepare("SELECT category, instrument_count, surgical_instrument FROM add_items_into_barcode WHERE batch_code = :batch_code");
+
+    items_query.bindValue(":batch_code", batch_code);
+
+    if(!items_query.exec()) {
+        db.rollback();
+        transaction_started = false;
+        emit error_message("Failed to load instruments: " + items_query.lastError().text());
+        return result;
+    }
+
+    QVariantList items;
+    while (items_query.next()) {
+        QVariantMap item;
+
+        item["category"] = items_query.value("category").toString();
+        item["count"] = items_query.value("instrument_count").toString();
+        item["instrument"] = items_query.value("surgical_instrument").toString();
+
+        items.append(item);
+    }
+
+    result["success"] = true;
+    result["batch_code"] = batch_code;
+    result["surgery_type"] = selected_surgery;
+    result["items"] = items;
+
+    return result;
+}
+
+void pick_a_set_widget::auto_fill() {
+    QDateTime current_date_time = QDateTime::currentDateTime();
+
+    QString username = UserSession::getInstance().getCurrentUser();
+
+    m_date_time_created = current_date_time.toString();
+    m_session_user = username;
+
+    emit date_time_created_changed();
+    emit session_user_changed();
+}
+
+QString pick_a_set_widget::session_user() const {
+    return m_session_user;
+}
+
+QString pick_a_set_widget::date_time_created() const {
+    return m_date_time_created;
+}
+
+bool pick_a_set_widget::commit_transaction() {
+    if (!transaction_started) {
+        qDebug() << "Failed to commit the transaction: " << db.lastError().text();
+        return false;
+    }
+
+    if (!db.commit()) {
+        qDebug() << "Failed to committ transaction: " << db.lastError().text();
+        return false;
+    }
+
+    transaction_started = false;
+
+    return true;
+}
+
+bool pick_a_set_widget::rollback_transaction() {
+    if (!transaction_started) {
+        return true;
+    }
+
+    if (!db.rollback()) {
+
+        qDebug() << "Failed to rollback transaction:" << db.lastError().text();
+
+        return false;
+    }
+
+    transaction_started = false;
+
+    return true;
+}
+
+QVariantMap pick_a_set_widget::get_batch_items(const QString &batch_code) {
+    QVariantMap result;
+
+    result["success"] = false;
+
+    QString selected_batch = batch_code.trimmed();
+
+    if (selected_batch.isEmpty()) {
+        emit error_message("No batch code was provided.");
+        return result;
+    }
+
+    if (!db.isOpen()) {
+        if (!db.open()) {
+            emit error_message("Failed to open database: " + db.lastError().text());
+
+            return result;
+        }
+    }
+
+    QSqlQuery query(db);
+
+    query.prepare(
+        "SELECT category, instrument_count, surgical_instrument "
+        "FROM add_items_into_barcode "
+        "WHERE batch_code = :batch_code"
+    );
+
+    query.bindValue(":batch_code", selected_batch);
+
+    if (!query.exec()) {
+        emit error_message("Failed to load batch items: " + query.lastError().text());
+
+        return result;
+    }
+
+    QVariantList items;
+
+    while (query.next()) {
+
+        QVariantMap item;
+
+        item["category"] =
+            query.value("category").toString();
+
+        item["count"] =
+            query.value("instrument_count").toString();
+
+        item["instrument"] =
+            query.value("surgical_instrument").toString();
+
+        items.append(item);
+    }
+
+    result["success"] = true;
+    result["items"] = items;
+
+    return result;
+}
+
+QVariantMap pick_a_set_widget::save_patient_details(
+    const QString &batch_code,
+    const QString &type_of_surgery,
+    const QString &patients_name,
+    const QString &patients_phone_no,
+    const QString &patients_other_phone_no,
+    const QString &next_of_kins_name,
+    const QString &next_of_kins_phone_no,
+    const QString &next_of_kins_other_phone_no,
+    const QString &theatre,
+    const QString &issued_to,
+    const QString &issued_by,
+    const QString &date_and_time_picked
+) {
+    QVariantMap result;
+
+    result["success"] = false;
+
+    if (!transaction_started) {
+        emit warning_message("No database transaction is active.");
+
+        return result;
+    }
+
+    if (!db.isOpen()) {
+        emit error_message("Database is not open: " + db.lastError().text());
+
+        return result;
+    }
+
+    QSqlQuery query(db);
+
+    query.prepare("INSERT INTO surgeries(batch_code, type_of_surgery, patients_name, patients_phone_no, patients_other_phone_no, next_of_kins_name, next_of_kins_phone_no, next_of_kins_other_phone_no, theatre, issued_to, issued_by, date_and_time_picked) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    query.addBindValue(batch_code);
+    query.addBindValue(type_of_surgery);
+    query.addBindValue(patients_name);
+    query.addBindValue(patients_phone_no);
+    query.addBindValue(patients_other_phone_no);
+    query.addBindValue(next_of_kins_name);
+    query.addBindValue(next_of_kins_phone_no);
+    query.addBindValue(next_of_kins_other_phone_no);
+    query.addBindValue(theatre);
+    query.addBindValue(issued_to);
+    query.addBindValue(issued_by);
+    query.addBindValue(date_and_time_picked);
+
+    if (!query.exec()) {
+        emit error_message("Your information was not submitted to the database: " + query.lastError().text());
+
+        rollback_transaction();
+
+        return result;
+    }
+
+    QSqlQuery query2(db);
+
+    query2.prepare("UPDATE created_batches SET status = :status, sterilised = :sterilised, pre_store = :store WHERE batch_code = :batch_code");
+    query2.bindValue(":batch_code", batch_code);
+    query2.bindValue(":status", "in_surgery");
+    query2.bindValue(":sterilised", false);
+    query2.bindValue(":store", true);
+
+    if (!query2.exec()) {
+        emit error_message("Failed to update the batch: " + query2.lastError().text());
+
+        rollback_transaction();
+
+        return result;
+    }
+    
+
+    if (!commit_transaction()) {
+        emit error_message("Failed to commit the transaction: " + db.lastError().text());
+
+        rollback_transaction();
+
+        return result;
+    }
+
+    result["success"] = true;
+    emit success_message("The patients details have successfully been commited to the database.");
+
+    return result;
 }

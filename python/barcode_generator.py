@@ -19,7 +19,7 @@ def generate_barcode(data, filename):
         code128 = barcode.get('code128')
         barcode_obj = code128(data, writer=writer)
         saved_filename = barcode_obj.save(filename)
-        print(f"Success: {saved_filename}") 
+        print(f"SUCCESS: {saved_filename}") 
         return saved_filename
     except Exception as e:
         print(f"ERROR:{str(e)}")

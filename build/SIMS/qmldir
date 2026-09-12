@@ -1,0 +1,4 @@
+module SIMS
+typeinfo sims_app.qmltypes
+prefer :/SIMS/
+

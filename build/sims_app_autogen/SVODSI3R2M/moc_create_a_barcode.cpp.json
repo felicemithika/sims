@@ -1,0 +1,218 @@
+{
+    "classes": [
+        {
+            "className": "create_a_barcode_widget",
+            "lineNumber": 19,
+            "methods": [
+                {
+                    "access": "public",
+                    "index": 10,
+                    "name": "auto_fill_items",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 11,
+                    "name": "start_items_transaction",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 12,
+                    "name": "rollback_items_transaction",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 13,
+                    "name": "setUp_selected_items_tableView",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "surgery_type",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 14,
+                    "name": "create_batch",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "batch_code",
+                    "notify": "batch_code_changed",
+                    "read": "batch_code",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "date_created",
+                    "notify": "date_created_changed",
+                    "read": "date_created",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "time_created",
+                    "notify": "time_created_changed",
+                    "read": "time_created",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "name": "session_user",
+                    "notify": "session_user_changed",
+                    "read": "session_user",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "create_a_barcode_widget",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "batch_code_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "date_created_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "name": "time_created_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 3,
+                    "name": "session_user_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "items",
+                            "type": "QVariantList"
+                        }
+                    ],
+                    "index": 4,
+                    "name": "selected_items_updated",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 5,
+                    "name": "success_message",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 6,
+                    "name": "warning_message",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 7,
+                    "name": "error_message",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "batch_code",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 8,
+                    "name": "batch_created",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "exit_code",
+                            "type": "int"
+                        },
+                        {
+                            "name": "exit_status",
+                            "type": "QProcess::ExitStatus"
+                        }
+                    ],
+                    "index": 9,
+                    "name": "on_barcode_generated",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "create_a_barcode.h",
+    "outputRevision": 68
+}

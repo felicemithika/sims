@@ -1,4 +1,4 @@
-#ifndef SELECT_THE_SURGERY_H
+/*#ifndef SELECT_THE_SURGERY_H
 #define SELECT_THE_SURGERY_H
 
 #include "../build/ui_select_the_surgery_widget.h"
@@ -31,4 +31,4 @@ class select_the_surgery_widget : public QWidget {
         pick_a_set_widget* go_to_surgery;
         
 };
-#endif
+#endif*/

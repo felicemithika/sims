@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/SIMS">/media/ghostbyte/datadump/sims/build/SIMS</file>
+
+  </qresource>
+</RCC>

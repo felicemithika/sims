@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "view_items_in_the_inventory_Form",
+            "lineNumber": 7,
+            "object": true,
+            "qualifiedClassName": "view_items_in_the_inventory_Form",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QWidget"
+                }
+            ]
+        }
+    ],
+    "inputFile": "view_the_inventory.h",
+    "outputRevision": 68
+}

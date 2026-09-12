@@ -1,0 +1,154 @@
+{
+    "classes": [
+        {
+            "className": "add_items_Form",
+            "lineNumber": 13,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "category",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 6,
+                    "name": "load_surgical_instruments",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "category",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "instrument_count",
+                            "type": "int"
+                        },
+                        {
+                            "name": "surgical_instrument",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "comments",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 7,
+                    "name": "add_requested_item",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "batch_code",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 8,
+                    "name": "set_batch_code",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "category_list",
+                    "notify": "category_list_changed",
+                    "read": "category_list",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "surgical_instrument_list",
+                    "notify": "surgical_instrument_list_changed",
+                    "read": "surgical_instrument_list",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "add_items_Form",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "items_added",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "category_list_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "name": "surgical_instrument_list_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 3,
+                    "name": "success_message",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 4,
+                    "name": "warning_message",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 5,
+                    "name": "error_message",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "add_items_into_the_barcode.h",
+    "outputRevision": 68
+}

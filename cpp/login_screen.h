@@ -1,31 +1,23 @@
 #ifndef LOGIN_SCREEN_H
 #define LOGIN_SCREEN_H
 
-#include <QWidget>
-#include <QSqlDatabase>
-#include <QSqlQuery>
-#include <QMessageBox>
-#include <QDebug>
-#include <QSqlError>
-#include "../build/ui_login-screen.h"
+#include <QObject>
+#include <QString>
 
-class loginScreen : public QWidget {
+class loginScreen : public QObject {
     Q_OBJECT
 
     public:
-        explicit loginScreen(QWidget* parent = nullptr);
-        ~loginScreen();
-    
-    private slots:
-        void pressing_loginButton();
-        void pressing_cancelButton();
+        explicit loginScreen(QObject* parent = nullptr);
+
+        Q_INVOKABLE void login(const QString& username, const QString& password);
+        Q_INVOKABLE void cancelLogin();
     
     signals:
         void loginSuccessful();
         void loginCancelled();
-    
-    private:
-        Ui::login_screen ui;
+        void loginFailed(const QString& message);
+
 };
 
 #endif

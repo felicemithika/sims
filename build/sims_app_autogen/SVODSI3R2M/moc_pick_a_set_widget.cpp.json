@@ -1,0 +1,204 @@
+{
+    "classes": [
+        {
+            "className": "pick_a_set_widget",
+            "lineNumber": 20,
+            "methods": [
+                {
+                    "access": "public",
+                    "index": 5,
+                    "name": "getSurgeryTypes",
+                    "returnType": "QStringList"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "surgery_type",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 6,
+                    "name": "select_batch",
+                    "returnType": "QVariantMap"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "batch_code",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 7,
+                    "name": "get_batch_items",
+                    "returnType": "QVariantMap"
+                },
+                {
+                    "access": "public",
+                    "index": 8,
+                    "name": "commit_transaction",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "index": 9,
+                    "name": "rollback_transaction",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "index": 10,
+                    "name": "auto_fill",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "batch_code",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "type_of_surgery",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "patients_name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "patients_phone_no",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "patients_other_phone_no",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "next_of_kins_name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "next_of_kins_phone_no",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "next_of_kins_other_phone_no",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "theatre",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "issued_to",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "issued_by",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "date_and_time_picked",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 11,
+                    "name": "save_patient_details",
+                    "returnType": "QVariantMap"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "session_user",
+                    "notify": "session_user_changed",
+                    "read": "session_user",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "date_time_created",
+                    "notify": "date_time_created_changed",
+                    "read": "date_time_created",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "pick_a_set_widget",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "session_user_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "date_time_created_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "success_message",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 3,
+                    "name": "warning_message",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 4,
+                    "name": "error_message",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "pick_a_set_widget.h",
+    "outputRevision": 68
+}

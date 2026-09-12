@@ -1,4 +1,4 @@
-#include "main_window.h"
+/*#include "main_window.h"
 #include <QStyle>
 #include <QVBoxLayout>
 #include <QLabel>
@@ -143,7 +143,7 @@ void MainWindow::show_empty_placeholder(const QString& message) {
 
 }
 
-void MainWindow::on_go_into_surgery_pushButton_clicked() {
+/*void MainWindow::on_go_into_surgery_pushButton_clicked() {
 
     if (!select_surgery) {
         select_surgery = new select_the_surgery_widget();
@@ -248,4 +248,4 @@ void MainWindow::on_check_items_in_the_inventory_pushButton_clicked() {
     }
 
     set_active_button(ui.check_items_in_the_inventory_pushButton);
-}
+}*/

@@ -1,0 +1,284 @@
+{
+    "classes": [
+        {
+            "className": "pre_theatre",
+            "lineNumber": 17,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "barcode",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 13,
+                    "name": "process_barcode",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 14,
+                    "name": "auto_fill",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "nurse_name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "scanned_by",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "current_scan_date_n_time",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 15,
+                    "name": "confirm_batch",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "nurse_name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "comment",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 16,
+                    "name": "reject_batch",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 17,
+                    "name": "start_barcode_scanning",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 18,
+                    "name": "stop_barcode_scanning",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "batch_code",
+                    "notify": "batch_code_changed",
+                    "read": "batch_code",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "type_of_surgery",
+                    "notify": "type_of_surgery_changed",
+                    "read": "type_of_surgery",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "patients_name",
+                    "notify": "patients_name_changed",
+                    "read": "patients_name",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "name": "last_scan_date_n_time",
+                    "notify": "last_scan_date_n_time_changed",
+                    "read": "last_scan_date_n_time",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 4,
+                    "name": "session_user",
+                    "notify": "session_user_changed",
+                    "read": "session_user",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 5,
+                    "name": "current_scan_date_n_time",
+                    "notify": "current_scan_date_n_time_changed",
+                    "read": "current_scan_date_n_time",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "pre_theatre",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "batch_code_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "type_of_surgery_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "name": "patients_name_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 3,
+                    "name": "last_scan_date_n_time_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 4,
+                    "name": "session_user_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 5,
+                    "name": "current_scan_date_n_time_changed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "items",
+                            "type": "QVariantList"
+                        }
+                    ],
+                    "index": 6,
+                    "name": "items_loaded",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 7,
+                    "name": "barcode_accepted",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 8,
+                    "name": "barcode_rejected",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 9,
+                    "name": "success_message",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 10,
+                    "name": "warning_message",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 11,
+                    "name": "error_message",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "private",
+                    "index": 12,
+                    "name": "read_terminal_input",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "pre_theatre.h",
+    "outputRevision": 68
+}

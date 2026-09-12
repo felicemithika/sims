@@ -12,44 +12,32 @@ parentdb enables us to use the db connection from create_a_barcode. This will en
     without this items will be added and get associated with a batch the was never created.
 */
 
-add_items_Form::add_items_Form(const QString &batch_code, QSqlDatabase* parentdb, QWidget* parent) 
-: QWidget(parent), currentBatchCode(batch_code) {
-    
-    this->setObjectName("add_items_Form");
-    ui.setupUi(this);
-
+add_items_Form::add_items_Form(const QString &batch_code, QSqlDatabase* parentdb, QObject* parent) 
+: QObject(parent), currentBatchCode(batch_code) {
     //Use the parent db ie from the create_a_barcode class
     if (parentdb) {
         db = *parentdb;
     }
 
-    QStringList items_in_category = {"Graspers", "Clamps", "Surgical Scissors", "Needle Drivers", "Retractors"};
-    items_in_category.sort();
-    ui.category_comboBox->addItems(items_in_category);
+    m_category_list = {"Graspers", "Clamps", "Surgical Scissors", "Needle Drivers", "Retractors"};
+    m_category_list.sort();
+    
+    emit category_list_changed();
 
-    /*connect category_combobox with surgical_instrument_combobox such that instruments displayed in surgical_instrument_combox are of the same catagory.
-            eg if we have category called boys_name and girls_name and we have names such as David, Jane, Peter and Joan
-            if you select category boys_name only David, Peter will be displayed.*/
-    connect(ui.category_comboBox, &QComboBox::currentTextChanged, this, &add_items_Form::add_items_into_surgical_instrument_combobox);
-    add_items_into_surgical_instrument_combobox(ui.category_comboBox->currentText());
-
-    ui.instrument_count_spinBox->setValue(1);
-    if (this->close()) {
-        
-    }
-
+    load_surgical_instruments(m_category_list.first());
 }
 
 //feed the surgical instrument combox with items
-void add_items_Form::add_items_into_surgical_instrument_combobox(const QString &category) {
+void add_items_Form::load_surgical_instruments(const QString &category) {
 
-    ui.surgical_instrument_comboBox->clear();
+    m_surgical_instrument_list.clear();
 
     if (!db.isOpen()) {
             if (!db.open())
         {
-            QMessageBox::critical(this, "Database Error",
-                                "Failed to connect to database: " + db.lastError().text());
+            qDebug()
+                << "Failed to connect to database:"
+                << db.lastError().text();
             return;
         }
         }
@@ -62,26 +50,32 @@ void add_items_Form::add_items_into_surgical_instrument_combobox(const QString &
     if (query.exec()) {
         while (query.next()) {
             QString name_data = query.value("name").toString();
-            ui.surgical_instrument_comboBox->addItem(name_data);
+            m_surgical_instrument_list.append(name_data);
         }
     } else {
-        QMessageBox::critical(this, "Database Error", "Failed to read the table" + db.lastError().text());
+        qDebug()
+            << "Failed to read the table:"
+            << query.lastError().text();
     }
+
+    emit surgical_instrument_list_changed();
 
 }
 
-//insert the surgical instruments going for surgery into the database
-void add_items_Form::on_add_instrument_pushButton_clicked() {
-    QString category = ui.category_comboBox->currentText();
-    int instrument_count = ui.instrument_count_spinBox->value();
-    QString surgical_instrument = ui.surgical_instrument_comboBox->currentText();
-    QString comments = ui.comments_plainTextEdit->toPlainText();
+QStringList add_items_Form::category_list() const {
+    return m_category_list;
+}
 
+QStringList add_items_Form::surgical_instrument_list() const {
+    return m_surgical_instrument_list;
+}
+
+//insert the surgical instruments going for surgery into the database
+void add_items_Form::add_requested_item(const QString &category, int instrument_count, const QString &surgical_instrument, const QString &comments) {
     if (!db.isOpen()) {
             if (!db.open())
         {
-            QMessageBox::critical(this, "Database Error",
-                                "Failed to connect to database: " + db.lastError().text());
+            emit error_message("Failed to connect to database: " + db.lastError().text());
             return;
         }
         }
@@ -112,7 +106,7 @@ void add_items_Form::on_add_instrument_pushButton_clicked() {
             current_items_count = query3.value("items_count").toInt();
         }
     }  else {
-        QMessageBox::critical(this, "Database Error", "Failed to read inventory:" + query3.lastError().text());
+        emit error_message("Failed to read inventory:" + query3.lastError().text());
         return;
     }
 
@@ -128,11 +122,13 @@ void add_items_Form::on_add_instrument_pushButton_clicked() {
     int new_items_count = current_items_count - instrument_count;
 
     if (instrument_count > current_items_count) {
-        QMessageBox::warning(this, " Insufficient items", QString("Not enough items in inventory!!\n"
-                                                                    "Available: %1\n"
-                                                                    "Requested: %2")
-                                                                    .arg(current_items_count)
-                                                                    .arg(instrument_count));
+        emit warning_message(
+            QString("Not enough items in inventory!!\n\n"
+                    "Available: %1\n"
+                    "Requested: %2")
+                .arg(current_items_count)
+                .arg(instrument_count)
+        );
         return;
     }
 
@@ -143,21 +139,28 @@ void add_items_Form::on_add_instrument_pushButton_clicked() {
     query2.bindValue(":new_items_count", new_items_count);
     query2.bindValue(":surgical_instrument", surgical_instrument);
 
-    if (query.exec() && query2.exec()) {
-        QMessageBox::information(this, "Success", "Items successfully added into the barcode.");
-
-        ui.instrument_count_spinBox->setValue(1);
-        ui.comments_plainTextEdit->clear();
-
-        emit items_added();
+    if (!query.exec()) {
+        qDebug() << "Failed to add item:"
+                << query.lastError().text();
+        return;
     }
+
+    if (!query2.exec()) {
+        qDebug() << "Failed to update inventory:"
+                << query2.lastError().text();
+        return;
+    }
+
+    emit success_message("Item successfuly added to the barcode.");
+
+    emit items_added();
 
     qDebug() << "Items added";
 
-}
+} 
 
-//close the widget
-void add_items_Form::on_exit_pushButton_clicked() {
+void add_items_Form::set_batch_code(const QString &batch_code) {
+    currentBatchCode = batch_code.trimmed();
 
-    this->close();
+    qDebug() << "Current batch code set to:" << currentBatchCode;
 }

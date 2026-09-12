@@ -1,0 +1,26 @@
+{
+    "classes": [
+        {
+            "className": "WelcomeScreen",
+            "lineNumber": 11,
+            "object": true,
+            "qualifiedClassName": "WelcomeScreen",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "finished",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QWidget"
+                }
+            ]
+        }
+    ],
+    "inputFile": "welcome-screen.h",
+    "outputRevision": 68
+}

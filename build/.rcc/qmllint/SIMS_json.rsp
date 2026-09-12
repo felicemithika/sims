@@ -1,0 +1,9 @@
+--bare
+-I
+/media/ghostbyte/datadump/sims/build
+-I
+/usr/lib/x86_64-linux-gnu/qt6/qml
+--resource
+/media/ghostbyte/datadump/sims/build/.qt/rcc/qmake_SIMS.qrc
+--json
+/media/ghostbyte/datadump/sims/build/SIMS_qmllint.json
